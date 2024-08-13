@@ -3,7 +3,7 @@ from PyQt5.QtWidgets import QApplication, QWidget, QHBoxLayout, QFrame, QSplitte
 from PyQt5.QtCore import Qt
 
 
-class App(QWidget):
+class Window(QWidget):
 
     def __init__(self):
         super().__init__()
@@ -44,6 +44,7 @@ class App(QWidget):
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    ex = App()
+    window = Window()
+    window.show()
     sys.exit(app.exec_())
 

@@ -2,7 +2,7 @@ import sys
 from PyQt5.QtWidgets import *
 
 
-class App(QWidget):
+class Window(QWidget):
 
     def __init__(self):
         super().__init__()
@@ -36,6 +36,7 @@ class App(QWidget):
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    ex = App()
+    window = Window()
+    window.show()
     sys.exit(app.exec_())
 
