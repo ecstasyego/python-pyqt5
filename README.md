@@ -6,13 +6,13 @@ export LIBGL_ALWAYS_INDIRECT=
 export DISPLAY=:0
 ```
 
-**Installation**
+**Installation**  
 qt-designer: https://build-system.fman.io/qt-designer-download
 ```bash
 pip install PyQt5
 ```
 
-**Execution**
+**Execution**  
 /usr/lib/qt5/bin/designer
 ```bash
 designer
