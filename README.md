@@ -1,5 +1,6 @@
 # python-pyqt5
 
+**Display**  
 xming xserver: https://sourceforge.net/projects/xming/
 ```bash
 export LIBGL_ALWAYS_INDIRECT=
