@@ -191,6 +191,49 @@ if __name__ == "__main__":
   
 <br/><br/>
 ### Input Widgets
+```python
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+def Window():
+    MainWindow = QtWidgets.QMainWindow()
+    centralwidget = QtWidgets.QWidget(MainWindow)
+
+    # Input Widgets
+    comboBox = QtWidgets.QComboBox(centralwidget)
+    fontComboBox = QtWidgets.QFontComboBox(centralwidget)
+    lineEdit = QtWidgets.QLineEdit(centralwidget)
+    textEdit = QtWidgets.QTextEdit(centralwidget)
+    plainTextEdit = QtWidgets.QPlainTextEdit(centralwidget)
+    spinBox = QtWidgets.QSpinBox(centralwidget)
+    doubleSpinBox = QtWidgets.QDoubleSpinBox(centralwidget)
+    timeEdit = QtWidgets.QTimeEdit(centralwidget)
+    dateEdit = QtWidgets.QDateEdit(centralwidget)
+    dateTimeEdit = QtWidgets.QDateTimeEdit(centralwidget)
+    dial = QtWidgets.QDial(centralwidget)
+    horizontalScrollBar = QtWidgets.QScrollBar(centralwidget)
+    horizontalScrollBar.setOrientation(QtCore.Qt.Horizontal)
+    verticalScrollBar = QtWidgets.QScrollBar(centralwidget)
+    verticalScrollBar.setOrientation(QtCore.Qt.Vertical)
+    horizontalSlider = QtWidgets.QSlider(centralwidget)
+    horizontalSlider.setOrientation(QtCore.Qt.Horizontal)
+    verticalSlider = QtWidgets.QSlider(centralwidget)
+    verticalSlider.setOrientation(QtCore.Qt.Vertical)
+    keySequenceEdit = QtWidgets.QKeySequenceEdit(centralwidget)
+
+    MainWindow.setCentralWidget(centralwidget)
+    MainWindow.setMenuBar(QtWidgets.QMenuBar(MainWindow))
+    MainWindow.setStatusBar(QtWidgets.QStatusBar(MainWindow))
+    QtCore.QMetaObject.connectSlotsByName(MainWindow)
+    return MainWindow
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+
+    MainWindow = Window()
+    MainWindow.show()
+    sys.exit(app.exec_())
+```
 
   
 <br/><br/>
