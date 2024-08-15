@@ -4,11 +4,11 @@ class Window(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
         layout = QtWidgets.QVBoxLayout()
-        toolBox = QtWidgets.QToolBox()
-        toolBox.addItem(QtWidgets.QWidget(), "ITEM1")
-        toolBox.addItem(QtWidgets.QWidget(), "ITEM2")
-        layout.addWidget(toolBox)
-
+        widget = QtWidgets.QToolBox()
+        widget.addItem(QtWidgets.QWidget(), "ITEM1")
+        widget.addItem(QtWidgets.QWidget(), "ITEM2")
+        
+        layout.addWidget(widget)
         self.setLayout(layout)
         self.setGeometry(300, 300, 300, 200)
 
