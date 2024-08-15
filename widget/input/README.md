@@ -88,8 +88,21 @@ if __name__ == "__main__":
 
 ### Callbacks
 - [QLineEdit](https://doc.qt.io/qt-5/qlineedit.html)
-  - widget: 
-  - callback: 
+  - Widget: widget = QtWidgets.QLineEdit()
+  - Callback: widget.
+  - Value: widget.text()
+- [QDateEdit](https://doc.qt.io/qt-5/qdateedit.html)
+  - Widget: widget = QtWidgets.QDateEdit()
+  - Callback: widget.
+  - Value: widget.date()
+- [QTimeEdit](https://doc.qt.io/qt-5/qtimeedit.html)
+  - Widget: widget = QtWidgets.QTimeEdit()
+  - Callback: widget.
+  - Value: widget.time()
+- [QDateTimeEdit](https://doc.qt.io/qt-5/qdatetimeedit.html)
+  - Widget: widget = QtWidgets.QDateTimeEdit()
+  - Callback: widget.
+  - Value: widget.dateTime()
 
 
 
