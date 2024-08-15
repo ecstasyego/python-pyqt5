@@ -144,7 +144,35 @@ if __name__ == "__main__":
   
 <br/><br/>
 ### Item Widgets
+```python
+from PyQt5 import QtCore, QtGui, QtWidgets
 
+def Window():
+    MainWindow = QtWidgets.QMainWindow()
+    centralwidget = QtWidgets.QWidget(MainWindow)
+
+    # Item Widgets
+    listWidget = QtWidgets.QListWidget(centralwidget)
+    treeWidget = QtWidgets.QTreeWidget(centralwidget)
+    treeWidget.headerItem().setText(0, "1")
+    tableWidget = QtWidgets.QTableWidget(centralwidget)
+    tableWidget.setColumnCount(0)
+    tableWidget.setRowCount(0)
+
+    MainWindow.setCentralWidget(centralwidget)
+    MainWindow.setMenuBar(QtWidgets.QMenuBar(MainWindow))
+    MainWindow.setStatusBar(QtWidgets.QStatusBar(MainWindow))
+    QtCore.QMetaObject.connectSlotsByName(MainWindow)
+    return MainWindow
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+
+    MainWindow = Window()
+    MainWindow.show()
+    sys.exit(app.exec_())
+```
   
 <br/><br/>
 ### Container
