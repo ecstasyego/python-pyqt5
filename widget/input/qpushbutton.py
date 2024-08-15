@@ -22,8 +22,8 @@ class Window(QtWidgets.QWidget):
         status_widget = self.get_widgets()[-1]
         status_widget.showMessage("CallBack", 1000)
 
-    def get_widgets(self):
-        layout = self.layout()
+    def get_widgets(self, layout=None):
+        layout = self.layout() if layout is None else layout
         widgets = list()
         for i in range(layout.count()):
             item = layout.itemAt(i)
@@ -33,8 +33,8 @@ class Window(QtWidgets.QWidget):
                     widgets.append(widget)
         return widgets
 
-    def get_sublayouts(self):
-        layout = self.layout()
+    def get_sublayouts(self, layout=None):
+        layout = self.layout() if layout is None else layout
         sublayouts = list()
         for i in range(layout.count()):
             item = layout.itemAt(i)
@@ -43,7 +43,7 @@ class Window(QtWidgets.QWidget):
                 if sublayout is not None:
                     sublayouts.append(sublayout)
         return sublayouts
-
+        
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
