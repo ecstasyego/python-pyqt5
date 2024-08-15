@@ -88,6 +88,8 @@ if __name__ == "__main__":
 
 ### Callbacks
 - [QLineEdit](https://doc.qt.io/qt-5/qlineedit.html)
+  - widget: 
+  - callback: 
 
 
 
