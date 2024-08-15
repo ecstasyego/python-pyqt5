@@ -51,8 +51,8 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 def Window():
     MainWindow = QtWidgets.QMainWindow()
     centralwidget = QtWidgets.QWidget(MainWindow)
-    verticalLayoutWidget = QtWidgets.QWidget(centralwidget)
-    verticalLayout = QtWidgets.QVBoxLayout(verticalLayoutWidget)
+    layoutwidget = QtWidgets.QWidget(centralwidget)
+    verticalLayout = QtWidgets.QVBoxLayout(layoutwidget)
 
     MainWindow.setCentralWidget(centralwidget)
     MainWindow.setMenuBar(QtWidgets.QMenuBar(MainWindow))
@@ -68,6 +68,32 @@ if __name__ == "__main__":
     MainWindow.show()
     sys.exit(app.exec_())
 ```
+
+**Horizental Layout**
+```python
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+def Window():
+    MainWindow = QtWidgets.QMainWindow()
+    centralwidget = QtWidgets.QWidget(MainWindow)
+    layoutwidget = QtWidgets.QWidget(centralwidget)
+    horizontalLayout = QtWidgets.QHBoxLayout(layoutwidget)
+
+    MainWindow.setCentralWidget(centralwidget)
+    MainWindow.setMenuBar(QtWidgets.QMenuBar(MainWindow))
+    MainWindow.setStatusBar(QtWidgets.QStatusBar(MainWindow))
+    QtCore.QMetaObject.connectSlotsByName(MainWindow)
+    return MainWindow
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+
+    MainWindow = Window()
+    MainWindow.show()
+    sys.exit(app.exec_())
+```
+
   
   
 ### Spacers
