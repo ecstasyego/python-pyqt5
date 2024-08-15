@@ -13,13 +13,36 @@ class Window(QtWidgets.QWidget):
 
         # LAYOUT
         layout = QtWidgets.QVBoxLayout()
-        layout.addStretch(1)
         layout.addWidget(widget1)
         layout.addWidget(widget2)
         layout.addWidget(widget3)
-        layout.addStretch(1)
         self.setLayout(layout)
         self.setGeometry(300, 300, 300, 200)
+
+    def callback(self):
+        pass
+
+    def get_widgets(self):
+        layout = self.layout()
+        widgets = list()
+        for i in range(layout.count()):
+            item = layout.itemAt(i)
+            if item is not None:
+                widget = item.widget()
+                if widget is not None:
+                    widgets.append(widget)
+        return widgets
+
+    def get_sublayouts(self):
+        layout = self.layout()
+        sublayouts = list()
+        for i in range(layout.count()):
+            item = layout.itemAt(i)
+            if item is not None:
+                sublayout = item.layout()
+                if sublayout is not None:
+                    sublayouts.append(sublayout)
+        return sublayouts
 
 if __name__ == "__main__":
     import sys
