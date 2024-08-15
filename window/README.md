@@ -21,14 +21,25 @@ if __name__ == "__main__":
     sys.exit(app.exec_())
 ```
 
-  
-`QtWidgets.QWidget`
+
 ```python
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-class Window(QtWidgets.QWidget):
+class Window(QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()
+        self.setWindowTitle('Window Title')
+        self.setGeometry(300, 300, 300, 200)
+
+        statusbar = self.statusBar()
+        statusbar.showMessage('Ready')
+
+        menubar = self.menuBar()
+        menubar.setNativeMenuBar(False)
+        menubar.addMenu('&File')
+
+        toolbar = self.addToolBar('Exit')
+        toolbar.addAction(QtWidgets.QAction(QtGui.QIcon('exit.png'), 'Exit', self))
 
 if __name__ == "__main__":
     import sys
