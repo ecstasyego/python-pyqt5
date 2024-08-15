@@ -1,1 +1,24 @@
+from PyQt5 import QtCore, QtGui, QtWidgets
 
+class Window(QtWidgets.QWidget):
+    def __init__(self):
+        super().__init__()
+        self.setLayout(QtWidgets.QVBoxLayout()) # LAYOUT
+        self.setGeometry(300, 300, 300, 200)
+
+    def keyPressEvent(self, e):
+        if e.key() == QtCore.Qt.Key_Escape:
+            self.close()
+        elif e.key() == QtCore.Qt.Key_F:
+            self.showFullScreen()
+        elif e.key() == QtCore.Qt.Key_N:
+            self.showNormal()
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+
+    window = Window()
+    window.show()
+    sys.exit(app.exec_())
