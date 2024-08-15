@@ -28,18 +28,40 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Window(QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle('Window Title')
+        centralwidget = QtWidgets.QWidget(self)
+        self.setCentralWidget(centralwidget)
+        self.setMenuBar(QtWidgets.QMenuBar(self))
+        self.setStatusBar(QtWidgets.QStatusBar(self))
+        QtCore.QMetaObject.connectSlotsByName(self)
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+
+    window = Window()
+    window.show()
+    sys.exit(app.exec_())
+```
+
+```python
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class Widget(QtWidgets.QWidget):
+    def __init__(self):
+        super().__init__()
+        self.setLayout(QtWidgets.QVBoxLayout())
+
+class Window(QtWidgets.QMainWindow):
+    def __init__(self):
+        super().__init__()
+        centralwidget = Widget()
+        self.setCentralWidget(centralwidget)
+        self.setMenuBar(QtWidgets.QMenuBar(self))
+        self.setStatusBar(QtWidgets.QStatusBar(self))
         self.setGeometry(300, 300, 300, 200)
+        QtCore.QMetaObject.connectSlotsByName(self)
 
-        statusbar = self.statusBar()
-        statusbar.showMessage('Ready')
-
-        menubar = self.menuBar()
-        menubar.setNativeMenuBar(False)
-        menubar.addMenu('&File')
-
-        toolbar = self.addToolBar('Exit')
-        toolbar.addAction(QtWidgets.QAction(QtGui.QIcon('exit.png'), 'Exit', self))
 
 if __name__ == "__main__":
     import sys
