@@ -97,6 +97,7 @@ SEARCH:`https://doc.qt.io/qt-5/[].html`
 
 <br/><br/><br/>
 ## Application
+Window > Widget > Layout  
 ![image](https://doc.qt.io/qt-5/images/mainwindowlayout.png)  
 
 ### Window
