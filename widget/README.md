@@ -53,36 +53,18 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Window(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
-        widget = QtWidgets.QWidget() # WIDGETS
-        layout = QtWidgets.QVBoxLayout() # LAYOUT
-        layout.addWidget(widget) 
+        # WIDGETS
+        self.widgets = dict()
+        self.widgets['widget'] = QtWidgets.QWidget()
+
+        # LAYOUT
+        layout = QtWidgets.QVBoxLayout()
+        layout.addWidget(self.widgets['widget'])
         self.setLayout(layout)
         self.setGeometry(300, 300, 300, 200)
 
     def callback(self):
         pass
-
-    def get_widgets(self, layout=None):
-        layout = self.layout() if layout is None else layout
-        widgets = list()
-        for i in range(layout.count()):
-            item = layout.itemAt(i)
-            if item is not None:
-                widget = item.widget()
-                if widget is not None:
-                    widgets.append(widget)
-        return widgets
-
-    def get_sublayouts(self, layout=None):
-        layout = self.layout() if layout is None else layout
-        sublayouts = list()
-        for i in range(layout.count()):
-            item = layout.itemAt(i)
-            if item is not None:
-                sublayout = item.layout()
-                if sublayout is not None:
-                    sublayouts.append(sublayout)
-        return sublayouts
 
 if __name__ == "__main__":
     import sys
