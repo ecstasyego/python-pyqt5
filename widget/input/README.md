@@ -93,15 +93,15 @@ if __name__ == "__main__":
   - Value: widget.text()
 - [QDateEdit](https://doc.qt.io/qt-5/qdateedit.html)
   - Widget: widget = QtWidgets.QDateEdit()
-  - Callback: widget..connect(self.callback)
+  - Callback: widget.dateChanged.connect(self.callback)
   - Value: widget.date().toString('yyyy-MM-dd')
 - [QTimeEdit](https://doc.qt.io/qt-5/qtimeedit.html)
   - Widget: widget = QtWidgets.QTimeEdit()
-  - Callback: widget..connect(self.callback)
+  - Callback: widget.timeChanged.connect(self.callback)
   - Value: widget.time().toString('HH:mm:ss')
 - [QDateTimeEdit](https://doc.qt.io/qt-5/qdatetimeedit.html)
   - Widget: widget = QtWidgets.QDateTimeEdit()
-  - Callback: widget..connect(self.callback)
+  - Callback: widget.dateTimeChanged.connect(self.callback)
   - Value: widget.dateTime().toString('yyyy-MM-dd HH:mm:ss')
 
 
