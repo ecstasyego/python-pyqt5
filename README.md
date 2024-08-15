@@ -27,8 +27,8 @@ designer
 ## Modules
 SEARCH:`https://doc.qt.io/qt-5/[].html`  
 [Reference](https://doc.qt.io/qt-5/qtwidgets-module.html)     
-- [QtWidgets](https://doc.qt.io/qt-5/qtwidgets-module.html)
-  - [QMainWindow](https://doc.qt.io/qt-5/qmainwindow.html)
+  - Window
+    - [QMainWindow](https://doc.qt.io/qt-5/qmainwindow.html)
   - Layouts
     - [QBoxLayout](https://doc.qt.io/qt-5/qboxlayout.html)
     - [QGridLayout](https://doc.qt.io/qt-5/qgridlayout.html)
@@ -53,6 +53,17 @@ SEARCH:`https://doc.qt.io/qt-5/[].html`
     - [QComboBox](https://doc.qt.io/qt-5/qcombobox.html)
     - [QFontComboBox](https://doc.qt.io/qt-5/qfontcombobox.html)
     - [QLineEdit](https://doc.qt.io/qt-5/qlineedit.html)
+    - [QTextEdut](https://doc.qt.io/qt-5/qtextedit.html)
+    - [QPlainTextEdit](https://doc.qt.io/qt-5/qplaintextedit.html)
+    - [QSpinBox](https://doc.qt.io/qt-5/qspinbox.html)
+    - [QDoubleSpinBox](https://doc.qt.io/qt-5/qdoublespinbox.html)
+    - [QTimeEdit](https://doc.qt.io/qt-5/qtimeedit.html)
+    - [QDateEdit](https://doc.qt.io/qt-5/qdateedit.html)
+    - [QDateTimeEdit](https://doc.qt.io/qt-5/qdatetimeedit.html)
+    - [QDial](https://doc.qt.io/qt-5/qdial.html)
+    - [QScrollBar](https://doc.qt.io/qt-5/qscrollbar.html)
+    - [QSlider](https://doc.qt.io/qt-5/qslider.html)
+    - [QKeySequenceEdit](https://doc.qt.io/qt-5/qkeysequenceedit.html)
   - Display Widgets
 
 
