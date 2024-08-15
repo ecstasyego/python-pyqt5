@@ -29,6 +29,14 @@ SEARCH:`https://doc.qt.io/qt-5/[].html`
 [Reference](https://doc.qt.io/qt-5/qtwidgets-module.html)     
 - [QtWidgets](https://doc.qt.io/qt-5/qtwidgets-module.html)
   - [QMainWindow](https://doc.qt.io/qt-5/qmainwindow.html)
+  - [QWidget](https://doc.qt.io/qt-5/qwidget.html)
+  - Layout
+    - [QBoxLayout](https://doc.qt.io/qt-5/qboxlayout.html)
+    - [QGridLayout](https://doc.qt.io/qt-5/qgridlayout.html)
+    - [QFormLayout](https://doc.qt.io/qt-5/qformlayout.html)
+  - Button
+    - [QPushButton](https://doc.qt.io/qt-5/qpushbutton.html)
+    - [QToolButton](https://doc.qt.io/qt-5/qtoolbutton.html)
   - [QComboBox](https://doc.qt.io/qt-5/qcombobox.html)
 
 
