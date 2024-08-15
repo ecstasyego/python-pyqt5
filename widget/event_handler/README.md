@@ -1,10 +1,10 @@
 ## Event Handler
 [QEvent](https://doc.qt.io/qt-5/qevent.html)  
 
-- Keyboard
+- [QKeyEvent](https://doc.qt.io/qt-5/qkeyevent.html)
   - keyPressEvent
   - keyReleaseEvent
-- Mouse
+- [QMouseEvent](https://doc.qt.io/qt-5/qmouseevent.html)
   - mouseDoubleClickEvent
   - mouseMoveEvent
   - mousePressEvent
