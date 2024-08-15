@@ -1,38 +1,23 @@
-import sys
-from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QHBoxLayout, QVBoxLayout
+from PyQt5 import QtCore, QtGui, QtWidgets
 
-
-class Window(QWidget):
-
+class Window(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
-        self.initUI()
+        layout = QtWidgets.QVBoxLayout()
+        layout.addStretch(1)
+        layout.addWidget(QtWidgets.QWidget())
+        layout.addWidget(QtWidgets.QWidget())
+        layout.addLayout(QtWidgets.QHBoxLayout())
+        layout.addLayout(QtWidgets.QHBoxLayout())
+        layout.addStretch(1)
 
-    def initUI(self):
-        okButton = QPushButton('OK')
-        cancelButton = QPushButton('Cancel')
-
-        hbox = QHBoxLayout()
-        hbox.addStretch(1)
-        hbox.addWidget(okButton)
-        hbox.addWidget(cancelButton)
-        hbox.addStretch(1)
-
-        vbox = QVBoxLayout()
-        vbox.addStretch(3)
-        vbox.addLayout(hbox)
-        vbox.addStretch(1)
-
-        self.setLayout(vbox)
-
-        self.setWindowTitle('Box Layout')
+        self.setLayout(layout)
         self.setGeometry(300, 300, 300, 200)
-        self.show()
 
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
 
-if __name__ == '__main__':
-    app = QApplication(sys.argv)
     window = Window()
     window.show()
     sys.exit(app.exec_())
-
