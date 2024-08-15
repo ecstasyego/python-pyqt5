@@ -1,33 +1,23 @@
-import sys
-from PyQt5.QtWidgets import (QApplication, QWidget, QGridLayout, QLabel, QLineEdit, QTextEdit)
+from PyQt5 import QtCore, QtGui, QtWidgets
 
-
-class Window(QWidget):
-
+class Window(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
-        self.initUI()
+        layout = QtWidgets.QGridLayout()
+        layout.addWidget(QtWidgets.QWidget(), 0, 0)
+        layout.addWidget(QtWidgets.QWidget(), 1, 0)
+        layout.addWidget(QtWidgets.QWidget(), 2, 0)
+        layout.addLayout(QtWidgets.QVBoxLayout(), 0, 1)
+        layout.addLayout(QtWidgets.QVBoxLayout(), 1, 1)
+        layout.addLayout(QtWidgets.QVBoxLayout(), 2, 1)
 
-    def initUI(self):
-        grid = QGridLayout()
-        self.setLayout(grid)
-
-        grid.addWidget(QLabel('Title:'), 0, 0)
-        grid.addWidget(QLabel('Author:'), 1, 0)
-        grid.addWidget(QLabel('Review:'), 2, 0)
-
-        grid.addWidget(QLineEdit(), 0, 1)
-        grid.addWidget(QLineEdit(), 1, 1)
-        grid.addWidget(QTextEdit(), 2, 1)
-
-        self.setWindowTitle('QGridLayout')
+        self.setLayout(layout)
         self.setGeometry(300, 300, 300, 200)
-        self.show()
 
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
 
-if __name__ == '__main__':
-    app = QApplication(sys.argv)
     window = Window()
     window.show()
     sys.exit(app.exec_())
-
