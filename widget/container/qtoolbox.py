@@ -5,8 +5,8 @@ class Window(QtWidgets.QWidget):
         super().__init__()
         layout = QtWidgets.QVBoxLayout()
         toolBox = QtWidgets.QToolBox()
-        toolBox.addItem(QtWidgets.QWidget(), "")
-        toolBox.addItem(QtWidgets.QWidget(), "")
+        toolBox.addItem(QtWidgets.QWidget(), "ITEM1")
+        toolBox.addItem(QtWidgets.QWidget(), "ITEM2")
         layout.addWidget(toolBox)
 
         self.setLayout(layout)
