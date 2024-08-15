@@ -21,6 +21,7 @@ pip install PyQt5
 designer
 ```
 
+<br/><br/><br/>
 ## Application
 **Window: QtWidgets.QMainWindow**
 ```python
