@@ -65,6 +65,15 @@ SEARCH:`https://doc.qt.io/qt-5/[].html`
     - [QSlider](https://doc.qt.io/qt-5/qslider.html)
     - [QKeySequenceEdit](https://doc.qt.io/qt-5/qkeysequenceedit.html)
   - Display Widgets
+    - [QLabel](https://doc.qt.io/qt-5/qlabel.html)
+    - [QTextBrowser](https://doc.qt.io/qt-5/qtextbrowser.html)
+    - [QGraphicsView](https://doc.qt.io/qt-5/qgraphicsview.html)
+    - [QCalendarWidget](https://doc.qt.io/qt-5/qcalendarwidget.html)
+    - [QLCDNumber](https://doc.qt.io/qt-5/qlcdnumber.html)
+    - [QProgressBar](https://doc.qt.io/qt-5/qprogressbar.html)
+    - [QOpenGLWidget](https://doc.qt.io/qt-5/qopenglwidget.html)
+    - [QQuickWidget](https://doc.qt.io/qt-5/qquickwidget.html)
+    - [QWebEngineView](https://doc.qt.io/qt-5/qwebengineview.html)
 
 
 <br/><br/><br/>
