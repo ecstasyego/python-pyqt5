@@ -100,7 +100,7 @@ if __name__ == "__main__":
     sys.exit(app.exec_())
 ```
 
-### Layout on a widget
+### Layout on Widget Class
 ```python
 from PyQt5 import QtCore, QtGui, QtWidgets
 
