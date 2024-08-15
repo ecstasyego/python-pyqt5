@@ -238,6 +238,49 @@ if __name__ == "__main__":
   
 <br/><br/>
 ### Display Widgets
+```python
+from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5 import QtQuickWidgets, QtWebEngineWidgets
+
+def Window():
+    MainWindow = QtWidgets.QMainWindow()
+    centralwidget = QtWidgets.QWidget(MainWindow)
+
+    # Display Widgets
+    label = QtWidgets.QLabel(centralwidget)
+    textBrowser = QtWidgets.QTextBrowser(centralwidget)
+    graphicsView = QtWidgets.QGraphicsView(centralwidget)
+    calendarWidget = QtWidgets.QCalendarWidget(centralwidget)
+    lcdNumber = QtWidgets.QLCDNumber(centralwidget)
+    progressBar = QtWidgets.QProgressBar(centralwidget)
+    progressBar.setProperty("value", 24)
+    hline = QtWidgets.QFrame(centralwidget)
+    hline.setFrameShape(QtWidgets.QFrame.HLine)
+    hline.setFrameShadow(QtWidgets.QFrame.Sunken)
+    vline = QtWidgets.QFrame(centralwidget)
+    vline.setFrameShape(QtWidgets.QFrame.VLine)
+    vline.setFrameShadow(QtWidgets.QFrame.Sunken)
+    openGLWidget = QtWidgets.QOpenGLWidget(centralwidget)
+    quickWidget = QtQuickWidgets.QQuickWidget(centralwidget)
+    quickWidget.setResizeMode(QtQuickWidgets.QQuickWidget.SizeRootObjectToView)
+    webEngineView = QtWebEngineWidgets.QWebEngineView(centralwidget)
+    webEngineView.setUrl(QtCore.QUrl("about:blank"))
+
+
+    MainWindow.setCentralWidget(centralwidget)
+    MainWindow.setMenuBar(QtWidgets.QMenuBar(MainWindow))
+    MainWindow.setStatusBar(QtWidgets.QStatusBar(MainWindow))
+    QtCore.QMetaObject.connectSlotsByName(MainWindow)
+    return MainWindow
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+
+    MainWindow = Window()
+    MainWindow.show()
+    sys.exit(app.exec_())
+```
   
 
 
