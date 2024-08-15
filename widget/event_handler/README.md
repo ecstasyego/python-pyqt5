@@ -23,18 +23,25 @@ class Window(QtWidgets.QWidget):
 
     def keyPressEvent(self, e):
         pass
+
     def keyReleaseEvent(self, e):
         pass
+
     def mouseDoubleClickEvent(self, e):
         pass
+
     def mousePressEvent(self, e):
         pass
+
     def mouseReleaseEvent(self, e):
         pass
+
     def mouseMoveEvent(self, e):
         pass
+
     def moveEvent(self, e):
         pass
+
     def resizeEvent(self, e):
         pass
 
