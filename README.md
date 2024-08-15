@@ -46,19 +46,18 @@ if __name__ == "__main__":
     window.show()
     sys.exit(app.exec_())
 ```
-
-  
 ```python
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-class Window(QtWidgets.QMainWindow):
-    def __init__(self):
-        super().__init__()
-        self.setCentralWidget(QtWidgets.QWidget(self))
-        self.setMenuBar(QtWidgets.QMenuBar(self))
-        self.setStatusBar(QtWidgets.QStatusBar(self))
-        QtCore.QMetaObject.connectSlotsByName(self)
+def Window():
+    MainWindow = QtWidgets.QMainWindow()
+    centralwidget = QtWidgets.QWidget(MainWindow)
 
+    MainWindow.setCentralWidget(centralwidget)
+    MainWindow.setMenuBar(QtWidgets.QMenuBar(MainWindow))
+    MainWindow.setStatusBar(QtWidgets.QStatusBar(MainWindow))
+    QtCore.QMetaObject.connectSlotsByName(MainWindow)
+    return MainWindow
 
 if __name__ == "__main__":
     import sys
@@ -68,24 +67,7 @@ if __name__ == "__main__":
     window.show()
     sys.exit(app.exec_())
 ```
-
   
-`QtWidgets.QWidget`
-```python
-from PyQt5 import QtCore, QtGui, QtWidgets
-
-class Window(QtWidgets.QWidget):
-    def __init__(self):
-        super().__init__()
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-
-    window = Window()
-    window.show()
-    sys.exit(app.exec_())
-```
 
 <br/><br/>
 ### Layouts
