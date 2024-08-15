@@ -6,10 +6,16 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Window(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
+        # widgets
+        widget1 = QtWidgets.QWidget()
+        widget2 = QtWidgets.QWidget()
+        widget3 = QtWidgets.QWidget()
+
+        # layout
         layout = QtWidgets.QVBoxLayout()
-        layout.addWidget(QtWidgets.QWidget())
-        layout.addWidget(QtWidgets.QWidget())
-        layout.addWidget(QtWidgets.QWidget())
+        layout.addWidget(widget1)
+        layout.addWidget(widget2)
+        layout.addWidget(widget3)
         self.setLayout(layout)
         self.setGeometry(300, 300, 300, 200)
 
