@@ -174,6 +174,38 @@ if __name__ == "__main__":
 
   
 ### Buttons
+```python
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+def Window():
+    MainWindow = QtWidgets.QMainWindow()
+    centralwidget = QtWidgets.QWidget(MainWindow)
+
+    # Buttons
+    pushButton = QtWidgets.QPushButton(centralwidget)
+    toolButton = QtWidgets.QToolButton(centralwidget)
+    radioButton = QtWidgets.QRadioButton(centralwidget)
+    checkBox = QtWidgets.QCheckBox(centralwidget)
+    commandLinkButton = QtWidgets.QCommandLinkButton(centralwidget)
+    buttonBox = QtWidgets.QDialogButtonBox(centralwidget)
+    buttonBox.setStandardButtons(QtWidgets.QDialogButtonBox.Cancel|QtWidgets.QDialogButtonBox.Ok)
+
+    MainWindow.setCentralWidget(centralwidget)
+    MainWindow.setMenuBar(QtWidgets.QMenuBar(MainWindow))
+    MainWindow.setStatusBar(QtWidgets.QStatusBar(MainWindow))
+
+    QtCore.QMetaObject.connectSlotsByName(MainWindow)
+    return MainWindow
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+
+    MainWindow = Window()
+    MainWindow.show()
+    sys.exit(app.exec_())
+```
+
 **[Push Button]: QtWidgets.QPushButton**
 ```python
 from PyQt5 import QtCore, QtGui, QtWidgets
