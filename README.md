@@ -139,11 +139,7 @@ if __name__ == "__main__":
 
 
 <br/><br/>
-### Item Views
-
-  
-<br/><br/>
-### Item Widgets
+### Item Views: Model-Based
 ```python
 from PyQt5 import QtCore, QtGui, QtWidgets
 
@@ -151,7 +147,38 @@ def Window():
     MainWindow = QtWidgets.QMainWindow()
     centralwidget = QtWidgets.QWidget(MainWindow)
 
-    # Item Widgets
+    # Item Views[Model-Based]
+    listView = QtWidgets.QListView(centralwidget)
+    treeView = QtWidgets.QTreeView(centralwidget)
+    tableView = QtWidgets.QTableView(centralwidget)
+    columnView = QtWidgets.QColumnView(centralwidget)
+    undoView = QtWidgets.QUndoView(centralwidget)
+
+    MainWindow.setCentralWidget(centralwidget)
+    MainWindow.setMenuBar(QtWidgets.QMenuBar(MainWindow))
+    MainWindow.setStatusBar(QtWidgets.QStatusBar(MainWindow))
+    QtCore.QMetaObject.connectSlotsByName(MainWindow)
+    return MainWindow
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+
+    MainWindow = Window()
+    MainWindow.show()
+    sys.exit(app.exec_())
+```
+  
+<br/><br/>
+### Item Widgets: Item-Based
+```python
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+def Window():
+    MainWindow = QtWidgets.QMainWindow()
+    centralwidget = QtWidgets.QWidget(MainWindow)
+
+    # Item Widgets[Item-Based]
     listWidget = QtWidgets.QListWidget(centralwidget)
     treeWidget = QtWidgets.QTreeWidget(centralwidget)
     treeWidget.headerItem().setText(0, "1")
