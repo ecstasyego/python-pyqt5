@@ -164,7 +164,7 @@ if __name__ == "__main__":
 ```python
 ```
 
-**[Check Box]**
+**[Combo Box]**
 ```python
 ```
 
