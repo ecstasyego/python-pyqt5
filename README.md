@@ -141,9 +141,9 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 def Window():
     MainWindow = QtWidgets.QMainWindow()
     centralwidget = QtWidgets.QWidget(MainWindow)
+    layoutwidget = QtWidgets.QWidget(centralwidget)
 
     # Layouts
-    layoutwidget = QtWidgets.QWidget(centralwidget)
     verticalLayout = QtWidgets.QVBoxLayout(layoutwidget)
     horizontalLayout = QtWidgets.QHBoxLayout(layoutwidget)
     gridLayout = QtWidgets.QGridLayout(layoutwidget)
