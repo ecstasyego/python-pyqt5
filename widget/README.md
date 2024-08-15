@@ -1,5 +1,12 @@
+## Widgets
+**Widget Properties**
+```
+widget.setGeometry(QtCore.QRect(200, 490, 118, 23))
+widget.setProperty("value", 24)
+widget.setObjectName("progressBar")
+```
 
-## Buttons
+### Buttons
 **[Push Button]: QtWidgets.QPushButton**
 ```python
 from PyQt5 import QtCore, QtGui, QtWidgets
