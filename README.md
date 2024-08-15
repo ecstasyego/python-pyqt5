@@ -46,7 +46,6 @@ if __name__ == "__main__":
 ```
 
   
-`QtWidgets.QMainWindow`
 ```python
 from PyQt5 import QtCore, QtGui, QtWidgets
 
