@@ -198,7 +198,31 @@ if __name__ == "__main__":
     MainWindow.show()
     sys.exit(app.exec_())
 ```
-  
+
+**[Tool Button]**
+```python
+```
+
+**[Radio Button]**
+```python
+```
+
+**[Check Box]**
+```python
+```
+
+**[Check Box]**
+```python
+```
+
+**[Command Link Button]**
+```python
+```
+
+**[Dialog Button Box]**
+```python
+```
+
 ### Item Views
 
   
