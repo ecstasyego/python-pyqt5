@@ -7,6 +7,8 @@ class Window(QtWidgets.QWidget):
         layout.addStretch(1)
         layout.addWidget(QtWidgets.QWidget())
         layout.addWidget(QtWidgets.QWidget())
+        layout.addLayout(QtWidgets.QHBoxLayout())
+        layout.addLayout(QtWidgets.QHBoxLayout())
         layout.addStretch(1)
 
         self.setLayout(layout)
