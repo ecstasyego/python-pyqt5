@@ -34,6 +34,7 @@ SEARCH:`https://doc.qt.io/qt-5/[].html`
     - [QGridLayout](https://doc.qt.io/qt-5/qgridlayout.html)
     - [QFormLayout](https://doc.qt.io/qt-5/qformlayout.html)
   - Spacers
+    - [QSpacerItem](https://doc.qt.io/qt-5/qspaceritem.html)
   - Buttons
     - [QPushButton](https://doc.qt.io/qt-5/qpushbutton.html)
     - [QToolButton](https://doc.qt.io/qt-5/qtoolbutton.html)
