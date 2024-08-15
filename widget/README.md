@@ -1,4 +1,22 @@
 ## Widgets
+`QtWidgets.QWidget`
+```python
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class Window(QtWidgets.QWidget):
+    def __init__(self):
+        super().__init__()
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+
+    window = Window()
+    window.show()
+    sys.exit(app.exec_())
+```
+  
+
 **Widget Properties**
 ```
 widget.setGeometry(QtCore.QRect(200, 490, 118, 23))
