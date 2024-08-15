@@ -148,7 +148,46 @@ if __name__ == "__main__":
   
 <br/><br/>
 ### Container
+```python
+from PyQt5 import QtCore, QtGui, QtWidgets
 
+def Window():
+    MainWindow = QtWidgets.QMainWindow()
+    centralwidget = QtWidgets.QWidget(MainWindow)
+
+    # Containers
+    widget = QtWidgets.QWidget(centralwidget)
+    mdiArea = QtWidgets.QMdiArea(centralwidget)
+    groupBox = QtWidgets.QGroupBox(centralwidget)
+    frame = QtWidgets.QFrame(centralwidget)
+    frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+    frame.setFrameShadow(QtWidgets.QFrame.Raised)
+    toolBox = QtWidgets.QToolBox(centralwidget)
+    toolBox.addItem(QtWidgets.QWidget(), "")
+    toolBox.addItem(QtWidgets.QWidget(), "")
+    tabWidget = QtWidgets.QTabWidget(centralwidget)
+    tabWidget.addTab(QtWidgets.QWidget(), "")
+    tabWidget.addTab(QtWidgets.QWidget(), "")
+    stackedWidget = QtWidgets.QStackedWidget(centralwidget)
+    stackedWidget.addWidget(QtWidgets.QWidget())
+    stackedWidget.addWidget(QtWidgets.QWidget())
+    scrollArea = QtWidgets.QScrollArea(centralwidget)
+    scrollArea.setWidget(QtWidgets.QWidget())
+
+    MainWindow.setCentralWidget(centralwidget)
+    MainWindow.setMenuBar(QtWidgets.QMenuBar(MainWindow))
+    MainWindow.setStatusBar(QtWidgets.QStatusBar(MainWindow))
+    QtCore.QMetaObject.connectSlotsByName(MainWindow)
+    return MainWindow
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+
+    MainWindow = Window()
+    MainWindow.show()
+    sys.exit(app.exec_())
+```
   
 <br/><br/>
 ### Input Widgets
