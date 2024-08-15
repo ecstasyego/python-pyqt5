@@ -3,12 +3,12 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Window(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
-        layout = QtWidgets.QVBoxLayout()
         widget = QtWidgets.QSplitter(QtCore.Qt.Vertical)
         widget.addWidget(QtWidgets.QWidget())
         widget.addWidget(QtWidgets.QSplitter(QtCore.Qt.Horizontal))
         widget.addWidget(QtWidgets.QWidget())
 
+        layout = QtWidgets.QVBoxLayout()
         layout.addWidget(widget)
         self.setLayout(layout)
         self.setGeometry(300, 300, 300, 200)
