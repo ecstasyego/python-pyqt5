@@ -6,12 +6,12 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Window(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
-        # widgets
+        # WIDGETS
         widget1 = QtWidgets.QWidget()
         widget2 = QtWidgets.QWidget()
         widget3 = QtWidgets.QWidget()
 
-        # layout
+        # LAYOUT
         layout = QtWidgets.QVBoxLayout()
         layout.addWidget(widget1)
         layout.addWidget(widget2)
