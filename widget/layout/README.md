@@ -9,8 +9,8 @@ class Window(QtWidgets.QWidget):
         self.setLayout(QtWidgets.QVBoxLayout())
         self.setGeometry(300, 300, 300, 200)
 
-    def get_widgets(self):
-        layout = self.layout()
+    def get_widgets(self, layout=None):
+        layout = self.layout() if layout is None else layout
         widgets = list()
         for i in range(layout.count()):
             item = layout.itemAt(i)
@@ -20,8 +20,8 @@ class Window(QtWidgets.QWidget):
                     widgets.append(widget)
         return widgets
 
-    def get_sublayouts(self):
-        layout = self.layout()
+    def get_sublayouts(self, layout=None):
+        layout = self.layout() if layout is None else layout
         sublayouts = list()
         for i in range(layout.count()):
             item = layout.itemAt(i)
