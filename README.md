@@ -21,6 +21,15 @@ pip install PyQt5
 designer
 ```
 
+
+
+<br/><br/><br/>
+## Modules
+https://doc.qt.io/qt-5/qtwidgets-module.html  
+- [QtWidgets](https://doc.qt.io/qt-5/qtwidgets-module.html)
+
+
+
 <br/><br/><br/>
 ## Application
 ![image](https://doc.qt.io/qt-5/images/mainwindowlayout.png)  
