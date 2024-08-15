@@ -4,10 +4,10 @@ class Window(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
         layout = QtWidgets.QVBoxLayout()
-        scrollArea = QtWidgets.QScrollArea()
-        scrollArea.setWidget(QtWidgets.QWidget())
-        layout.addWidget(scrollArea)
-
+        widget = QtWidgets.QScrollArea()
+        widget.setWidget(QtWidgets.QWidget())
+        
+        layout.addWidget(widget)
         self.setLayout(layout)
         self.setGeometry(300, 300, 300, 200)
 
