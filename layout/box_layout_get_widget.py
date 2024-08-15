@@ -16,7 +16,7 @@ class Window(QtWidgets.QWidget):
         widget2 = layout.itemAt(1).widget()
         widget3 = layout.itemAt(2).widget()
 
-
+        
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
