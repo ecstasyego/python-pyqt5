@@ -85,3 +85,9 @@ if __name__ == "__main__":
     window.show()
     sys.exit(app.exec_())
 ```
+
+### Callbacks
+- [QLineEdit](https://doc.qt.io/qt-5/qlineedit.html)
+
+
+
