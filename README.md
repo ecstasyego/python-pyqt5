@@ -21,7 +21,7 @@ pip install PyQt5
 designer
 ```
 
-
+## Application
 **Window**
 ```python
 from PyQt5 import QtCore, QtGui, QtWidgets
