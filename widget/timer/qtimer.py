@@ -15,6 +15,7 @@ class Window(QtWidgets.QWidget):
         # LAYOUT
         layout = QtWidgets.QVBoxLayout()
         layout.addWidget(self.widgets['label'])
+        layout.addStretch(1)
         self.setLayout(layout)
         self.setGeometry(300, 300, 300, 200)
 
