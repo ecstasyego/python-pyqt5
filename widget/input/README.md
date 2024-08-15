@@ -1,4 +1,35 @@
 ## Input Widgets
+```python
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class Window(QtWidgets.QWidget):
+    def __init__(self):
+        super().__init__()
+        # WIDGETS
+        self.widgets = dict()
+        self.widgets['widget1'] = QtWidgets.QWidget()
+        self.widgets['widget2'] = QtWidgets.QWidget()
+        self.widgets['widget3'] = QtWidgets.QWidget()
+
+        # LAYOUT
+        layout = QtWidgets.QVBoxLayout()
+        layout.addWidget(self.widgets['widget1'])
+        layout.addWidget(self.widgets['widget2'])
+        layout.addWidget(self.widgets['widget3'])
+        self.setLayout(layout)
+        self.setGeometry(300, 300, 300, 200)
+
+    def callback(self):
+        pass
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+
+    window = Window()
+    window.show()
+    sys.exit(app.exec_())
+```
 
 ```python
 from PyQt5 import QtCore, QtGui, QtWidgets
