@@ -42,3 +42,30 @@ if __name__ == "__main__":
     MainWindow.show()
     sys.exit(app.exec_())
 ```
+
+### Layouts
+
+  
+### Spacers
+
+  
+### Buttons
+
+  
+### Item Views
+
+  
+### Item Widgets
+
+  
+### Container
+
+  
+### Input Widgets
+
+  
+### Display Widgets
+  
+
+
+
