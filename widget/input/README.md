@@ -116,7 +116,7 @@ if __name__ == "__main__":
 - [QCheckBox](https://doc.qt.io/qt-5/qcheckbox.html)
   - Widget: widget = QtWidgets.QCheckBox()
   - Signals: widget.stateChanged.connect(self.callback)
-  - Value: widget.()
+  - Value: widget.checkState()
 - [QComboBox](https://doc.qt.io/qt-5/qcombobox.html)
   - Widget: widget = QtWidgets.QComboBox()
   - Signals: widget..connect(self.callback)
