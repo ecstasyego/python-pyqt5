@@ -23,7 +23,8 @@ class Window(QtWidgets.QWidget):
         self.setGeometry(300, 300, 300, 200)
 
     def callback(self):
-        self.widgets['widget4'].showMessage("CallBack", 1000)
+        state = self.widgets['widget1'].checkState()
+        self.widgets['widget4'].showMessage(f"Current State: {state}", 1000)
 
 
 if __name__ == "__main__":
