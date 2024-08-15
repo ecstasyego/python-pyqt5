@@ -25,7 +25,8 @@ class Window(QtWidgets.QWidget):
         super().__init__()
         widget = QtWidgets.QWidget() # WIDGETS
         layout = QtWidgets.QVBoxLayout() # LAYOUT
-        layout.addWidget(widget) 
+        layout.addWidget(widget)
+        layout.addStretch(1)
         self.setLayout(layout)
         self.setGeometry(300, 300, 300, 200)
 
