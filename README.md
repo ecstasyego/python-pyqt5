@@ -39,8 +39,8 @@ if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
 
-    MainWindow = Window()
-    MainWindow.show()
+    window = Window()
+    window.show()
     sys.exit(app.exec_())
 ```
   
@@ -93,8 +93,8 @@ if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
 
-    MainWindow = Window()
-    MainWindow.show()
+    window = Window()
+    window.show()
     sys.exit(app.exec_())
 ```
 
@@ -132,8 +132,8 @@ if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
 
-    MainWindow = Window()
-    MainWindow.show()
+    window = Window()
+    window.show()
     sys.exit(app.exec_())
 ```
 
@@ -164,8 +164,8 @@ if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
 
-    MainWindow = Window()
-    MainWindow.show()
+    window = Window()
+    window.show()
     sys.exit(app.exec_())
 ```
   
@@ -196,8 +196,8 @@ if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
 
-    MainWindow = Window()
-    MainWindow.show()
+    window = Window()
+    window.show()
     sys.exit(app.exec_())
 ```
   
@@ -239,8 +239,8 @@ if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
 
-    MainWindow = Window()
-    MainWindow.show()
+    window = Window()
+    window.show()
     sys.exit(app.exec_())
 ```
   
@@ -285,8 +285,8 @@ if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
 
-    MainWindow = Window()
-    MainWindow.show()
+    window = Window()
+    window.show()
     sys.exit(app.exec_())
 ```
 
@@ -332,8 +332,8 @@ if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
 
-    MainWindow = Window()
-    MainWindow.show()
+    window = Window()
+    window.show()
     sys.exit(app.exec_())
 ```
   
