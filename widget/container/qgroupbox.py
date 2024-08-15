@@ -4,10 +4,10 @@ class Window(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
         layout = QtWidgets.QVBoxLayout()
-        groupBox = QtWidgets.QGroupBox()
-        groupBox.setLayout(QtWidgets.QVBoxLayout())
-        layout.addWidget(groupBox)
-
+        widget = QtWidgets.QGroupBox()
+        widget.setLayout(QtWidgets.QVBoxLayout())
+        
+        layout.addWidget(widget)
         self.setLayout(layout)
         self.setGeometry(300, 300, 300, 200)
 
