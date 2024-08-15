@@ -23,7 +23,7 @@ if __name__ == "__main__":
  - widget.setObjectName("progressBar")
 
 
-
+<br/><br/><br/>
 ### Buttons
 **[Push Button]: QtWidgets.QPushButton**
 ```python
