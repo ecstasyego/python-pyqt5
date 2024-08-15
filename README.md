@@ -37,6 +37,7 @@ SEARCH:`https://doc.qt.io/qt-5/[].html`
   - Button
     - [QPushButton](https://doc.qt.io/qt-5/qpushbutton.html)
     - [QToolButton](https://doc.qt.io/qt-5/qtoolbutton.html)
+    - [QRadioButton](https://doc.qt.io/qt-5/qradiobutton.html)
   - [QComboBox](https://doc.qt.io/qt-5/qcombobox.html)
 
 
