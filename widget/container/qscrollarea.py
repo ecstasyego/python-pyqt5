@@ -3,9 +3,11 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Window(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
+        # WIDGETS
         widget = QtWidgets.QScrollArea()
         widget.setWidget(QtWidgets.QWidget())
-        
+
+        # LAYOUT
         layout = QtWidgets.QVBoxLayout()
         layout.addWidget(widget)
         self.setLayout(layout)
