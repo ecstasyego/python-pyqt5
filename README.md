@@ -67,6 +67,7 @@ if __name__ == "__main__":
 ```
 
 
+<br/><br/>
 ### Layouts
 **[Vertical Layout]: QtWidgets.QVBoxLayout**
 ```python
@@ -170,9 +171,11 @@ if __name__ == "__main__":
 
 
   
+<br/><br/>
 ### Spacers
 
   
+<br/><br/>
 ### Buttons
 ```python
 from PyQt5 import QtCore, QtGui, QtWidgets
@@ -255,18 +258,23 @@ if __name__ == "__main__":
 ```python
 ```
 
+<br/><br/>
 ### Item Views
 
   
+<br/><br/>
 ### Item Widgets
 
   
+<br/><br/>
 ### Container
 
   
+<br/><br/>
 ### Input Widgets
 
   
+<br/><br/>
 ### Display Widgets
   
 
