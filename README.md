@@ -25,7 +25,7 @@ designer
 
 <br/><br/><br/>
 ## Modules
-`SEARCH`:`https://doc.qt.io/qt-5/[].html`
+SEARCH:`https://doc.qt.io/qt-5/[].html`  
 [Reference](https://doc.qt.io/qt-5/qtwidgets-module.html)     
 - [QtWidgets](https://doc.qt.io/qt-5/qtwidgets-module.html)
   - [QMainWindow](https://doc.qt.io/qt-5/qmainwindow.html)
