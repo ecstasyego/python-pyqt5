@@ -16,6 +16,7 @@ class Window(QtWidgets.QWidget):
         layout.addWidget(self.widgets['widget1'])
         layout.addWidget(self.widgets['widget2'])
         layout.addWidget(self.widgets['widget3'])
+        layout.addStretch(1)
         self.setLayout(layout)
         self.setGeometry(300, 300, 300, 200)
 
@@ -47,6 +48,7 @@ class Window(QtWidgets.QWidget):
         layout.addWidget(widget1)
         layout.addWidget(widget2)
         layout.addWidget(widget3)
+        layout.addStretch(1)
         self.setLayout(layout)
         self.setGeometry(300, 300, 300, 200)
 
