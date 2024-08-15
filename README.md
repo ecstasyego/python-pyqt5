@@ -29,16 +29,31 @@ SEARCH:`https://doc.qt.io/qt-5/[].html`
 [Reference](https://doc.qt.io/qt-5/qtwidgets-module.html)     
 - [QtWidgets](https://doc.qt.io/qt-5/qtwidgets-module.html)
   - [QMainWindow](https://doc.qt.io/qt-5/qmainwindow.html)
-  - [QWidget](https://doc.qt.io/qt-5/qwidget.html)
-  - Layout
+  - Layouts
     - [QBoxLayout](https://doc.qt.io/qt-5/qboxlayout.html)
     - [QGridLayout](https://doc.qt.io/qt-5/qgridlayout.html)
     - [QFormLayout](https://doc.qt.io/qt-5/qformlayout.html)
-  - Button
+  - Spacers
+  - Buttons
     - [QPushButton](https://doc.qt.io/qt-5/qpushbutton.html)
     - [QToolButton](https://doc.qt.io/qt-5/qtoolbutton.html)
     - [QRadioButton](https://doc.qt.io/qt-5/qradiobutton.html)
-  - [QComboBox](https://doc.qt.io/qt-5/qcombobox.html)
+  - Item Views: Model-Based
+  - Item Widgets: Item-Based
+  - Containers
+    - [QWidget](https://doc.qt.io/qt-5/qwidget.html)
+    - [QMdiArea](https://doc.qt.io/qt-5/qmdiarea.html)
+    - [QToolBox](https://doc.qt.io/qt-5/qtoolbox.html)
+    - [QGroupBox](https://doc.qt.io/qt-5/qgroupbox.html)
+    - [QTabWidget](https://doc.qt.io/qt-5/qtabwidget.html)
+    - [QScrollArea](https://doc.qt.io/qt-5/qscrollarea.html)
+    - [QStackedWidget](https://doc.qt.io/qt-5/qstackedwidget.html)
+    - [QFrame](https://doc.qt.io/qt-5/qframe.html)
+  - Input Widgets
+    - [QComboBox](https://doc.qt.io/qt-5/qcombobox.html)
+    - [QFontComboBox](https://doc.qt.io/qt-5/qfontcombobox.html)
+    - [QLineEdit](https://doc.qt.io/qt-5/qlineedit.html)
+  - Display Widgets
 
 
 <br/><br/><br/>
