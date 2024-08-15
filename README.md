@@ -15,12 +15,22 @@ pip install PyQt5
 ```
 
   
-**Execution**  
+**Application-Design**  
 /usr/lib/qt5/bin/designer
 ```bash
 designer
 ```
 
+**Executable File**
+```bash
+pip install pyinstaller
+```
+```bash
+pyinstaller main.py # dist/main.exe
+pyinstaller -w main.py # --windowed
+pyinstaller -F main.py # -onefile
+pyinstaller -w -F main.py # --windowed -onefile
+```
 
 
 <br/><br/><br/>
