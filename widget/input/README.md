@@ -89,20 +89,20 @@ if __name__ == "__main__":
 ### Callbacks
 - [QLineEdit](https://doc.qt.io/qt-5/qlineedit.html)
   - Widget: widget = QtWidgets.QLineEdit()
-  - Callback: widget.
+  - Callback: widget.textChanged[str].connect(self.callback)
   - Value: widget.text()
 - [QDateEdit](https://doc.qt.io/qt-5/qdateedit.html)
   - Widget: widget = QtWidgets.QDateEdit()
-  - Callback: widget.
-  - Value: widget.date()
+  - Callback: widget..connect(self.callback)
+  - Value: widget.date().toString('yyyy-MM-dd')
 - [QTimeEdit](https://doc.qt.io/qt-5/qtimeedit.html)
   - Widget: widget = QtWidgets.QTimeEdit()
-  - Callback: widget.
-  - Value: widget.time()
+  - Callback: widget..connect(self.callback)
+  - Value: widget.time().toString('HH:mm:ss')
 - [QDateTimeEdit](https://doc.qt.io/qt-5/qdatetimeedit.html)
   - Widget: widget = QtWidgets.QDateTimeEdit()
-  - Callback: widget.
-  - Value: widget.dateTime()
+  - Callback: widget..connect(self.callback)
+  - Value: widget.dateTime().toString('yyyy-MM-dd HH:mm:ss')
 
 
 
