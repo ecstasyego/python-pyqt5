@@ -103,6 +103,14 @@ if __name__ == "__main__":
   - Widget: widget = QtWidgets.QDateTimeEdit()
   - Callback: widget.dateTimeChanged.connect(self.callback)
   - Value: widget.dateTime().toString('yyyy-MM-dd HH:mm:ss')
+- [QSpinBox](https://doc.qt.io/qt-5/qspinbox.html)
+  - Widget: widget = QtWidgets.QSpinBox()
+  - Callback: widget.valueChanged.connect(self.callback)
+  - Value: widget.value()
+- [QDoubleSpinBox](https://doc.qt.io/qt-5/qdoublespinbox.html)
+  - Widget: widget = QtWidgets.QDoubleSpinBox()
+  - Callback: widget.valueChanged.connect(self.callback)
+  - Value: widget.value()
 
 
 
