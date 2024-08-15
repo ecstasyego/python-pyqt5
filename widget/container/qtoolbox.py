@@ -3,10 +3,12 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Window(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
+        # WIDGETS
         widget = QtWidgets.QToolBox()
         widget.addItem(QtWidgets.QWidget(), "ITEM1")
         widget.addItem(QtWidgets.QWidget(), "ITEM2")
-        
+
+        # LAYOUT
         layout = QtWidgets.QVBoxLayout()
         layout.addWidget(widget)
         self.setLayout(layout)
