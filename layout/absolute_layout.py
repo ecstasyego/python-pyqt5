@@ -1,32 +1,16 @@
-import sys
-from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QPushButton
+from PyQt5 import QtCore, QtGui, QtWidgets
 
-
-class Window(QWidget):
-
+class Window(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
-        self.initUI()
+        widget = QtWidgets.QWidget(self)
+        widget.move(20, 20)
+        self.setGeometry(300, 300, 300, 200)
 
-    def initUI(self):
-        label1 = QLabel('Label1', self)
-        label1.move(20, 20)
-        label2 = QLabel('Label2', self)
-        label2.move(20, 60)
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
 
-        btn1 = QPushButton('Button1', self)
-        btn1.move(80, 13)
-        btn2 = QPushButton('Button2', self)
-        btn2.move(80, 53)
-
-        self.setWindowTitle('Absolute Positioning')
-        self.setGeometry(300, 300, 400, 200)
-        self.show()
-
-
-if __name__ == '__main__':
-    app = QApplication(sys.argv)
     window = Window()
     window.show()
     sys.exit(app.exec_())
-
