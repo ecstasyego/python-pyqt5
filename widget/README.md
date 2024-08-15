@@ -33,9 +33,9 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Window(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
-        layout = QtWidgets.QVBoxLayout()
-        widget = QtWidgets.QWidget()
-        layout.addWidget(widget)
+        widget = QtWidgets.QWidget() # WIDGETS
+        layout = QtWidgets.QVBoxLayout() # LAYOUT
+        layout.addWidget(widget) 
         self.setLayout(layout)
         self.setGeometry(300, 300, 300, 200)
 
