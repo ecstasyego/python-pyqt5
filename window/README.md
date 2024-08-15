@@ -1,5 +1,27 @@
 ## Window
-`QtWidgets.QMainWindow`
+
+```python
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+def Window():
+    MainWindow = QtWidgets.QMainWindow()
+    MainWindow.setCentralWidget(QtWidgets.QWidget(MainWindow))
+    MainWindow.setMenuBar(QtWidgets.QMenuBar(MainWindow))
+    MainWindow.setStatusBar(QtWidgets.QStatusBar(MainWindow))
+    QtCore.QMetaObject.connectSlotsByName(MainWindow)
+    return MainWindow
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+
+    window = Window()
+    window.show()
+    sys.exit(app.exec_())
+```
+
+  
+
 ```python
 from PyQt5 import QtCore, QtGui, QtWidgets
 
