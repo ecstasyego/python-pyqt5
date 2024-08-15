@@ -23,9 +23,9 @@ designer
 
 <br/><br/><br/>
 ## Application
+![image](https://doc.qt.io/qt-5/images/mainwindowlayout.png)  
 
 ### Window
-![image](https://doc.qt.io/qt-5/images/mainwindowlayout.png)  
 `QtWidgets.QMainWindow`
 ```python
 from PyQt5 import QtCore, QtGui, QtWidgets
