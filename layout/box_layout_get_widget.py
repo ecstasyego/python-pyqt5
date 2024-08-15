@@ -12,9 +12,9 @@ class Window(QtWidgets.QWidget):
         self.setGeometry(300, 300, 300, 200)
 
         # widget = layout.itemAt(index).widget()
-        widget1 = layout.itemAt(0).widget()
-        widget2 = layout.itemAt(1).widget()
-        widget3 = layout.itemAt(2).widget()
+        widget0 = layout.itemAt(0).widget()
+        widget1 = layout.itemAt(1).widget()
+        widget2 = layout.itemAt(2).widget()
 
         
 if __name__ == "__main__":
