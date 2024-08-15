@@ -16,8 +16,9 @@ class Window(QtWidgets.QWidget):
         for i in range(layout.count()):
             item = layout.itemAt(i)
             if item is not None:
-                widgets.append(item.widget())
-
+                widget = item.widget()
+                if widget is not None:
+                    widgets.append(item.widget())
 
 if __name__ == "__main__":
     import sys
