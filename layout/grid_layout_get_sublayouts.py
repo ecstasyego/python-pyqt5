@@ -14,7 +14,7 @@ class Window(QtWidgets.QWidget):
         self.setLayout(layout)
         self.setGeometry(300, 300, 300, 200)
 
-        # widget = layout.itemAt(index).widget()
+        # sublayout = layout.itemAt(index).layout()
         sublayouts = list()
         for i in range(layout.count()):
             item = layout.itemAt(i)
