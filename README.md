@@ -25,7 +25,7 @@ designer
 
 <br/><br/><br/>
 ## Modules
-https://doc.qt.io/qt-5/qtwidgets-module.html  
+[Reference](https://doc.qt.io/qt-5/qtwidgets-module.html)  
 - [QtWidgets](https://doc.qt.io/qt-5/qtwidgets-module.html)
 
 
