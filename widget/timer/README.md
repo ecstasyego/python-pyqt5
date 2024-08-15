@@ -38,12 +38,13 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Window(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
-        # TIME
+        # DATE TIME
         time = QtCore.QTime.currentTime().toString('HH:mm:ss')
+        date = QtCore.QDate.currentDate().toString('yyyy-MM-dd')
 
         # WIDGETS
         widget = QtWidgets.QLabel(self)
-        widget.setText(f'Current Time: {time}')
+        widget.setText(f'Current Time: {date} {time}')
 
         # LAYOUT
         layout = QtWidgets.QVBoxLayout()
