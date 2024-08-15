@@ -33,8 +33,8 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Window(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
-        QtWidgets.QPushButton('First Button', self).move(50,50)
-        QtWidgets.QPushButton('Second Button', self).move(50,70)
+        QtWidgets.QPushButton('OK', self).move(50,50)
+        QtWidgets.QPushButton('Cancel', self).move(50,70)
         self.setGeometry(300, 300, 300, 200)
 
 if __name__ == "__main__":
