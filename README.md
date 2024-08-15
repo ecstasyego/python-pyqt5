@@ -27,7 +27,7 @@ designer
 ## Modules
 [Reference](https://doc.qt.io/qt-5/qtwidgets-module.html)  
 - [QtWidgets](https://doc.qt.io/qt-5/qtwidgets-module.html)
-
+  - [QComboBox](https://doc.qt.io/qt-5/qcombobox.html)
 
 
 <br/><br/><br/>
