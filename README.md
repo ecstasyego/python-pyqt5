@@ -22,7 +22,7 @@ designer
 ```
 
 ## Application
-**Window**
+**Window: QtWidgets.QMainWindow**
 ```python
 from PyQt5 import QtCore, QtGui, QtWidgets
 
@@ -44,7 +44,7 @@ if __name__ == "__main__":
 ```
 
 ### Layouts
-**Vertical Layout**
+**Vertical Layout: QtWidgets.QVBoxLayout**
 ```python
 from PyQt5 import QtCore, QtGui, QtWidgets
 
@@ -69,7 +69,7 @@ if __name__ == "__main__":
     sys.exit(app.exec_())
 ```
 
-**Horizental Layout**
+**Horizental Layout: QtWidgets.QHBoxLayout**
 ```python
 from PyQt5 import QtCore, QtGui, QtWidgets
 
@@ -94,7 +94,7 @@ if __name__ == "__main__":
     sys.exit(app.exec_())
 ```
 
-**Grid Layout**
+**Grid Layout: QtWidgets.QGridLayout**
 ```python
 from PyQt5 import QtCore, QtGui, QtWidgets
 
@@ -119,7 +119,7 @@ if __name__ == "__main__":
     sys.exit(app.exec_())
 ```
 
-**Form Layout**
+**Form Layout: QtWidgets.QFormLayout**
 ```python
 from PyQt5 import QtCore, QtGui, QtWidgets
 
