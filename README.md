@@ -39,7 +39,15 @@ SEARCH:`https://doc.qt.io/qt-5/[].html`
     - [QToolButton](https://doc.qt.io/qt-5/qtoolbutton.html)
     - [QRadioButton](https://doc.qt.io/qt-5/qradiobutton.html)
   - Item Views: Model-Based
+    - [QListView](https://doc.qt.io/qt-5/qlistview.html)
+    - [QTreeView](https://doc.qt.io/qt-5/qtreeview.html)
+    - [QTableView](https://doc.qt.io/qt-5/qtableview.html)
+    - [QColumnView](https://doc.qt.io/qt-5/qcolumnview.html)
+    - [QUndoView](https://doc.qt.io/qt-5/qundoview.html)
   - Item Widgets: Item-Based
+    - [QListWidget](https://doc.qt.io/qt-5/qlistwidget.html)
+    - [QTreeWidget](https://doc.qt.io/qt-5/qtreewidget.html)
+    - [QTableWidget](https://doc.qt.io/qt-5/qtablewidget.html)
   - Containers
     - [QWidget](https://doc.qt.io/qt-5/qwidget.html)
     - [QMdiArea](https://doc.qt.io/qt-5/qmdiarea.html)
