@@ -9,7 +9,7 @@ class Window(QtWidgets.QWidget):
         widget.addWidget(QtWidgets.QSplitter(QtCore.Qt.Horizontal))
         widget.addWidget(QtWidgets.QWidget())
 
-        # LAYOUT
+        # LAYOUTS
         layout = QtWidgets.QVBoxLayout()
         layout.addWidget(widget)
         self.setLayout(layout)
