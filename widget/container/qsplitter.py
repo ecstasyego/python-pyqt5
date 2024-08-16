@@ -6,8 +6,10 @@ class Window(QtWidgets.QWidget):
         # WIDGETS
         widget = QtWidgets.QSplitter(QtCore.Qt.Vertical)
         widget.addWidget(QtWidgets.QWidget())
-        widget.addWidget(QtWidgets.QSplitter(QtCore.Qt.Horizontal))
         widget.addWidget(QtWidgets.QWidget())
+        widget.addWidget(QtWidgets.QSplitter(QtCore.Qt.Horizontal))
+        widget.addWidget(QtWidgets.QFrame())
+        widget.addWidget(QtWidgets.QFrame())
 
         # LAYOUTS
         layout = QtWidgets.QVBoxLayout()
