@@ -3,7 +3,6 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Window(QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setStyleSheet("background-color: white; background: white;")
         self.setCentralWidget(QtWidgets.QWidget(self))
         self.setMenuBar(QtWidgets.QMenuBar(self))
         self.setStatusBar(QtWidgets.QStatusBar(self))
