@@ -8,7 +8,7 @@ class Window(QtWidgets.QWidget):
         widget.addWidget(QtWidgets.QWidget())
         widget.addWidget(QtWidgets.QWidget())
 
-        # LAYOUT
+        # LAYOUTS
         layout = QtWidgets.QVBoxLayout()
         layout.addWidget(widget)
         self.setLayout(layout)
