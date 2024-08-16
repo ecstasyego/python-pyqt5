@@ -15,7 +15,7 @@ class Window(QtWidgets.QWidget):
         self.widgets['widget2'].setText('Button&2')
         self.widgets['widget3'].setEnabled(False)
 
-        # LAYOUT
+        # LAYOUTS
         layout = QtWidgets.QVBoxLayout()
         layout.addWidget(self.widgets['widget1'])
         layout.addWidget(self.widgets['widget2'])
