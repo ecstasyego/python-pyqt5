@@ -11,7 +11,7 @@ class Window(QtWidgets.QWidget):
         self.widgets['widget2'] = QtWidgets.QWidget()
         self.widgets['widget3'] = QtWidgets.QWidget()
 
-        # LAYOUT
+        # LAYOUTS
         layout = QtWidgets.QVBoxLayout()
         layout.addWidget(self.widgets['widget1'])
         layout.addWidget(self.widgets['widget2'])
