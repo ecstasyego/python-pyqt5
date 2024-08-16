@@ -14,7 +14,7 @@ class Window(QtWidgets.QWidget):
         self.widgets['widget2'].showMessage("status2", 2000) # milliseconds
         self.widgets['widget3'].showMessage("status3", 3000) # milliseconds
 
-        # Layout
+        # LAYOUTS
         layout = QtWidgets.QVBoxLayout()
         layout.addWidget(self.widgets['widget1'])
         layout.addWidget(self.widgets['widget2'])
