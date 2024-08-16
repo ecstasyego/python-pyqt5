@@ -5,7 +5,7 @@ class Window(QtWidgets.QWidget):
         super().__init__()
         # ITEM MODEL
         model = QtGui.QStandardItemModel()
-        model.setHorizontalHeaderLabels(['COL1'])
+        model.setHorizontalHeaderLabels(['NAME'])
 
         root_item = model.invisibleRootItem()
         category1 = QtGui.QStandardItem('Category 1')
