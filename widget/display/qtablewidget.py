@@ -11,6 +11,7 @@ class Window(QtWidgets.QWidget):
         for i in range(20):
             for j in range(4):
                 self.widgets['widget1'].setItem(i, j, QtWidgets.QTableWidgetItem(str(i+j)))
+        self.widgets['widget1'].horizontalHeader().setSectionResizeMode(QtWidgets.QHeaderView.Stretch)
 
         # LAYOUTS
         layout = QtWidgets.QVBoxLayout()
