@@ -12,7 +12,7 @@ class Window(QtWidgets.QWidget):
         self.widgets['widget1'].setChecked(True)
         self.widgets['widget2'].setText("Option2")
 
-        # LAYOUT
+        # LAYOUTS
         layout = QtWidgets.QVBoxLayout()
         layout.addWidget(self.widgets['widget1'])
         layout.addWidget(self.widgets['widget2'])
