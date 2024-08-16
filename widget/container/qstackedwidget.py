@@ -4,9 +4,12 @@ class Window(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
         # WIDGETS
-        widget = QtWidgets.QStackedWidget()
-        widget.addWidget(QtWidgets.QWidget())
-        widget.addWidget(QtWidgets.QWidget())
+        widget = QtWidgets.QStackedWidget(self)
+        widget.addWidget(QtWidgets.QWidget(self))
+        widget.addWidget(QtWidgets.QWidget(self))
+        widget.addWidget(QtWidgets.QWidget(self))
+        widget.setCurrentIndex(0) # set: init page
+        widget.currentIndex() # get: init page
 
         # LAYOUTS
         layout = QtWidgets.QVBoxLayout()
