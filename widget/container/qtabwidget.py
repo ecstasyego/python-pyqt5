@@ -8,7 +8,7 @@ class Window(QtWidgets.QWidget):
         widget.addTab(QtWidgets.QWidget(), 'TAB1')
         widget.addTab(QtWidgets.QWidget(), 'TAB2')
 
-        # LAYOUT
+        # LAYOUTS
         layout = QtWidgets.QVBoxLayout()
         layout.addWidget(widget)
         self.setLayout(layout)
