@@ -12,7 +12,7 @@ class Window(QtWidgets.QWidget):
         self.widgets['widget1'].toggle()
         self.widgets['widget1'].stateChanged.connect(self.callback)
 
-        # LAYOUT
+        # LAYOUTS
         layout = QtWidgets.QVBoxLayout()
         layout.addWidget(self.widgets['widget1'])
         layout.addWidget(self.widgets['widget2'])
