@@ -4,10 +4,9 @@ class Window(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
         # WIDGETS
-        widget = QtWidgets.QSplitter(QtCore.Qt.Horizontal)
-        widget.addWidget(QtWidgets.QFrame())
-        widget.addWidget(QtWidgets.QFrame())
-        widget.addWidget(QtWidgets.QFrame())
+        widget = QtWidgets.QFrame()
+        widget.setFrameShape(QtWidgets.QFrame.Panel)
+        widget.setLayout(QtWidgets.QHBoxLayout())
 
         # LAYOUTS
         layout = QtWidgets.QVBoxLayout()
@@ -21,4 +20,5 @@ if __name__ == "__main__":
 
     window = Window()
     window.show()
-    sys.exit(app.exec_())                                                                                                                                              
+    sys.exit(app.exec_())
+    
