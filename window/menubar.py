@@ -8,6 +8,11 @@ class Window(QtWidgets.QMainWindow):
         self.setStatusBar(QtWidgets.QStatusBar(self))
         QtCore.QMetaObject.connectSlotsByName(self)
 
+        self.menuBar().addMenu('&File')
+        self.menuBar().addMenu('&Edit')
+        self.menuBar().addMenu('&Settings')
+        self.menuBar().addMenu('&Help')
+
 
 if __name__ == "__main__":
     import sys
