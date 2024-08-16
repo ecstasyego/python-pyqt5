@@ -14,7 +14,7 @@ class Window(QtWidgets.QWidget):
         self.widgets['widget1'].setDisplayFormat('yyyy-MM-dd hh:mm:ss')
         self.widgets['widget1'].dateTimeChanged.connect(self.callback)
 
-        # LAYOUT
+        # LAYOUTS
         layout = QtWidgets.QVBoxLayout()
         layout.addWidget(self.widgets['widget1'])
         layout.addStretch(1)
