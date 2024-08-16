@@ -12,7 +12,7 @@ class Window(QtWidgets.QWidget):
         self.widgets['widget1'].setSingleStep(2)
         self.widgets['widget1'].valueChanged.connect(self.callback)
 
-        # LAYOUT
+        # LAYOUTS
         layout = QtWidgets.QVBoxLayout()
         layout.addWidget(self.widgets['widget1'])
         layout.addStretch(1)
