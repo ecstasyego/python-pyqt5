@@ -52,6 +52,9 @@ class Window(QtWidgets.QWidget):
     def resizeEvent(self, e):
         self.c.signal.emit
 
+    def closeEvent(self, e):
+        self.c.signal.emit
+
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
