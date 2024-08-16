@@ -15,7 +15,7 @@ class Window(QtWidgets.QWidget):
         self.widgets['widget1'].setDateRange(QtCore.QDate(1900, 1, 1), QtCore.QDate(2100, 12, 31))
         self.widgets['widget1'].dateChanged.connect(self.callback)
 
-        # LAYOUT
+        # LAYOUTS
         layout = QtWidgets.QVBoxLayout()
         layout.addWidget(self.widgets['widget1'])
         layout.addStretch(1)
