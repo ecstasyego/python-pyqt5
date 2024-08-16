@@ -14,7 +14,7 @@ class Window(QtWidgets.QWidget):
         self.widgets = dict()
         self.widgets['widget1'] = QtWidgets.QProgressBar(self)
 
-        # LAYOUT
+        # LAYOUTS
         layout = QtWidgets.QVBoxLayout()
         layout.addWidget(self.widgets['widget1'])
         layout.addStretch(1)
