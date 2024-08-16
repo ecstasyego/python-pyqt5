@@ -13,7 +13,7 @@ class Window(QtWidgets.QWidget):
         self.widgets['widget1'].addItem('Option3')
         self.widgets['widget1'].addItem('Option4')
 
-        # LAYOUT
+        # LAYOUTS
         layout = QtWidgets.QVBoxLayout()
         layout.addWidget(self.widgets['widget1'])
         layout.addStretch(1)
