@@ -55,13 +55,46 @@ class Window(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
         # WIDGETS
-        self.widgets = dict()
-        self.widgets['widget'] = QtWidgets.QWidget()
+        widget = QtWidgets.QWidget()
 
-        # LAYOUT
+        # LAYOUTS
         layout = QtWidgets.QVBoxLayout()
-        layout.addWidget(self.widgets['widget'])
+        layout.addWidget(widget)
         layout.addStretch(1)
+
+        self.setLayout(layout)
+        self.setGeometry(300, 300, 300, 200)
+
+    def callback(self):
+        pass
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+
+    window = Window()
+    window.show()
+    sys.exit(app.exec_())
+```
+  
+```python
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class Window(QtWidgets.QWidget):
+    def __init__(self):
+        super().__init__()
+        self.widgets = dict()
+        self.layouts = dict()
+
+        # WIDGETS
+        self.widgets['widget1'] = QtWidgets.QWidget()
+
+        # LAYOUTS
+        self.layouts['layout0'] = QtWidgets.QVBoxLayout()
+        self.layouts['layout0'].addWidget(self.widgets['widget1'])
+        self.layouts['layout0'].addStretch(1)
+
+        layout = self.layouts['layout0']
         self.setLayout(layout)
         self.setGeometry(300, 300, 300, 200)
 
