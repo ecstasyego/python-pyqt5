@@ -7,7 +7,7 @@ class Window(QtWidgets.QWidget):
         widget = QtWidgets.QScrollArea()
         widget.setWidget(QtWidgets.QWidget())
 
-        # LAYOUT
+        # LAYOUTS
         layout = QtWidgets.QVBoxLayout()
         layout.addWidget(widget)
         self.setLayout(layout)
