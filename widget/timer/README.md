@@ -39,12 +39,13 @@ class Window(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
         # DATE TIME
+        datetime = QtCore.QDateTime.currentDateTime().toString('yyyy-MM-dd HH:mm:ss')
         time = QtCore.QTime.currentTime().toString('HH:mm:ss')
         date = QtCore.QDate.currentDate().toString('yyyy-MM-dd')
 
         # WIDGETS
         widget = QtWidgets.QLabel(self)
-        widget.setText(f'Current Time: {date} {time}')
+        widget.setText(f'Current Time: {datetime}, {date} {time}')
 
         # LAYOUT
         layout = QtWidgets.QVBoxLayout()
