@@ -12,6 +12,7 @@ export DISPLAY=:0
 qt-designer: https://build-system.fman.io/qt-designer-download
 ```bash
 pip install PyQt5
+pip install pyqtchart
 ```
 
   
