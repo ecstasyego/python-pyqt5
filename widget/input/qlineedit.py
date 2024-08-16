@@ -11,7 +11,7 @@ class Window(QtWidgets.QWidget):
         # WIDGETS: Properties
         self.widgets['widget1'].textChanged[str].connect(self.callback)
 
-        # LAYOUT
+        # LAYOUTS
         layout = QtWidgets.QVBoxLayout()
         layout.addWidget(self.widgets['widget1'])
         layout.addStretch(1)
