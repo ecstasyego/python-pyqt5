@@ -7,7 +7,7 @@ class Window(QtWidgets.QWidget):
         widget = QtWidgets.QGroupBox()
         widget.setLayout(QtWidgets.QVBoxLayout())
 
-        # LAYOUT
+        # LAYOUTS
         layout = QtWidgets.QVBoxLayout()
         layout.addWidget(widget)
         self.setLayout(layout)
