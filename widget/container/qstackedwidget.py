@@ -5,9 +5,9 @@ class Window(QtWidgets.QWidget):
         super().__init__()
         # WIDGETS
         widget = QtWidgets.QStackedWidget(self)
-        widget.addWidget(QtWidgets.QWidget(self))
-        widget.addWidget(QtWidgets.QWidget(self))
-        widget.addWidget(QtWidgets.QWidget(self))
+        widget.addWidget(QtWidgets.QWidget(self)) # PAGE0
+        widget.addWidget(QtWidgets.QWidget(self)) # PAGE1
+        widget.addWidget(QtWidgets.QWidget(self)) # PAGE2
         widget.setCurrentIndex(0) # set: init page
         widget.currentIndex() # get: init page
 
