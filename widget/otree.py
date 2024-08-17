@@ -1,4 +1,4 @@
-class OTree:
+class OTreeWrapper:
     def __init__(self, node=None):
         self.node = node
 
@@ -20,7 +20,7 @@ class OTree:
 
     @classmethod
     def progeny(cls, self):
-        members = list(filter(lambda x: not x.startswith('_OTree__') and x != 'parent' and x != 'name', dir(self)))
+        members = list(filter(lambda x: not x.startswith('_OTreeWrapper__') and x != 'parent' and x != 'name', dir(self)))
         self.children = dict(map(lambda x: (x, getattr(self, x)), filter(lambda x: isinstance(getattr(self, x), cls), members)))
         if len(self.children):
             for name, child in self.children.items():
@@ -29,17 +29,17 @@ class OTree:
                 return cls.progeny(child)
         else:
             return
-
-root = OTree()
-root.a = OTree()
-root.a.a = OTree()
-root.a.b = OTree()
-root.a.b.a = OTree()
-root.a.b.b = OTree()
-root.a.b.b.a = OTree()
-root.a.c = OTree()
-root.a.d = OTree()
-OTree.progeny(root)
+            
+root = OTreeWrapper()
+root.a = OTreeWrapper()
+root.a.a = OTreeWrapper()
+root.a.b = OTreeWrapper()
+root.a.b.a = OTreeWrapper()
+root.a.b.b = OTreeWrapper()
+root.a.b.b.a = OTreeWrapper()
+root.a.c = OTreeWrapper()
+root.a.d = OTreeWrapper()
+OTreeWrapper.progeny(root)
 
 print(root.a.parent)
 print(root.a.children)
