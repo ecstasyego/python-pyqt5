@@ -6,6 +6,7 @@ class Window(QtWidgets.QWidget):
         # WIDGETS
         widget = QtWidgets.QScrollArea()
         widget.setWidget(QtWidgets.QWidget())
+        widget.setWidgetResizable(True)
 
         # LAYOUTS
         layout = QtWidgets.QVBoxLayout()
