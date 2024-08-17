@@ -1,6 +1,7 @@
+from abc import *
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-class OTreeWrapper:
+class OTreeWrapper(metaclass=ABCMeta):
     def __init__(self, node=None):
         self.node = node
         self.generation = 0
@@ -71,22 +72,26 @@ class OTreeWrapper:
 
             self.connection(child) # OTree Node Connection
         return self.children.values()
-
+        
+    @abstractmethod
     def connection(self, child):
-        self.node
-        child.node
+        pass
+        
+class QTreeWrapper(OTreeWrapper):
+    def connection(self, child):
+        pass
 
 
 class Window(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
-        root = OTreeWrapper(QtWidgets.QTreeWidget())
-        root.a = OTreeWrapper(QtWidgets.QTreeWidgetItem(root.node, ["Root 1", "Root item description"]))
-        root.b = OTreeWrapper(QtWidgets.QTreeWidgetItem(root.node, ["Root 2", "Root item description"]))
-        root.a.a = OTreeWrapper(QtWidgets.QTreeWidgetItem(root.a.node, ["Child 1", "Child item description"]))
-        root.a.b = OTreeWrapper(QtWidgets.QTreeWidgetItem(root.a.node, ["Child 2", "Another child item description"]))
-        root.b.a = OTreeWrapper(QtWidgets.QTreeWidgetItem(root.b.node, ["Child 3", "Child item under second root"]))
-        OTreeWrapper.progeny(root)
+        root = QTreeWrapper(QtWidgets.QTreeWidget())
+        root.a = QTreeWrapper(QtWidgets.QTreeWidgetItem(root.node, ["Root 1", "Root item description"]))
+        root.b = QTreeWrapper(QtWidgets.QTreeWidgetItem(root.node, ["Root 2", "Root item description"]))
+        root.a.a = QTreeWrapper(QtWidgets.QTreeWidgetItem(root.a.node, ["Child 1", "Child item description"]))
+        root.a.b = QTreeWrapper(QtWidgets.QTreeWidgetItem(root.a.node, ["Child 2", "Another child item description"]))
+        root.b.a = QTreeWrapper(QtWidgets.QTreeWidgetItem(root.b.node, ["Child 3", "Child item under second root"]))
+        QTreeWrapper.progeny(root)
 
         # WIDGETS
         widget = root.node
