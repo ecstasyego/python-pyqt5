@@ -21,8 +21,10 @@ class Window(QtWidgets.QWidget):
         self.setLayout(layout)
         self.setGeometry(300, 300, 300, 200)
 
-    def callback(self):                                                                                                                                                        pass
-                                                                                                                                                                       if __name__ == "__main__":
+    def callback(self):
+        pass
+        
+if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
                                                                                                                                                                            window = Window()
