@@ -1,4 +1,6 @@
-class OTreeWrapper:
+from abc import *
+
+class OTreeWrapper(metaclass=ABCMeta):
     def __init__(self, node=None):
         self.node = node
         self.generation = 0
@@ -69,24 +71,28 @@ class OTreeWrapper:
 
             self.connection(child) # OTree Node Connection
         return self.children.values()
-
+        
+    @abstractmethod
     def connection(self, child):
-        self.node
-        child.node
-
-root = OTreeWrapper()
-root.a = OTreeWrapper()
-root.a.a = OTreeWrapper()
-root.a.b = OTreeWrapper()
-root.a.b.a = OTreeWrapper()
-root.a.b.b = OTreeWrapper()
-root.a.b.b.a = OTreeWrapper()
-root.a.c = OTreeWrapper()
-root.a.d = OTreeWrapper()
-root.b = OTreeWrapper()
-root.b.a = OTreeWrapper()
-root.b.b = OTreeWrapper()
-root.b.c = OTreeWrapper()
-OTreeWrapper.progeny(root)
+        pass
+        
+class QTreeWrapper(OTreeWrapper):
+    def connection(self, child):
+        pass
+        
+root = QTreeWrapper()
+root.a = QTreeWrapper()
+root.a.a = QTreeWrapper()
+root.a.b = QTreeWrapper()
+root.a.b.a = QTreeWrapper()
+root.a.b.b = QTreeWrapper()
+root.a.b.b.a = QTreeWrapper()
+root.a.c = QTreeWrapper()
+root.a.d = QTreeWrapper()
+root.b = QTreeWrapper()
+root.b.a = QTreeWrapper()
+root.b.b = QTreeWrapper()
+root.b.c = QTreeWrapper()
+QTreeWrapper.progeny(root)
 
 print(root.a.b.b.a)
