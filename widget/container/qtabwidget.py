@@ -8,6 +8,14 @@ class Window(QtWidgets.QWidget):
         widget.addTab(QtWidgets.QWidget(), 'TAB1')
         widget.addTab(QtWidgets.QWidget(), 'TAB2')
 
+        widget.setTabText(0, 'OLDTAB1')
+        widget.setTabText(1, 'OLDTAB2')
+
+        widget.removeTab(0)
+        widget.insertTab(0, QtWidgets.QWidget(), 'UPDATED TAB1')
+        widget.removeTab(1)
+        widget.insertTab(1, QtWidgets.QWidget(), 'UPDATED TAB2')
+
         # LAYOUTS
         layout = QtWidgets.QVBoxLayout()
         layout.addWidget(widget)
@@ -20,4 +28,4 @@ if __name__ == "__main__":
 
     window = Window()
     window.show()
-    sys.exit(app.exec_())
+    sys.exit(app.exec_())                                                                                                                                              
