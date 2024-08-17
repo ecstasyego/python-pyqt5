@@ -1,6 +1,7 @@
+from abc import *
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-class OTreeWrapper:
+class OTreeWrapper(metaclass=ABCMeta):
     def __init__(self, node=None):
         self.node = node
         self.generation = 0
@@ -71,7 +72,12 @@ class OTreeWrapper:
 
             self.connection(child) # OTree Node Connection
         return self.children.values()
-
+        
+    @abstractmethod
+    def connection(self, child):
+        pass
+        
+class QTreeWrapper(OTreeWrapper):
     def connection(self, child):
         self.node.appendRow(child.node)
 
@@ -80,20 +86,20 @@ class Window(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
         # ITEM MODEL
-        treeview = OTreeWrapper(QtWidgets.QTreeView())
-        treeview.model = OTreeWrapper(QtGui.QStandardItemModel())
-        treeview.model.root_item = OTreeWrapper(treeview.model.node.invisibleRootItem())
-        treeview.model.root_item.category1 = OTreeWrapper(QtGui.QStandardItem('Category 1'))
-        treeview.model.root_item.category2 = OTreeWrapper(QtGui.QStandardItem('Category 2'))
-        treeview.model.root_item.category1.item1 = OTreeWrapper(QtGui.QStandardItem('Item 1.1'))
-        treeview.model.root_item.category1.item2 = OTreeWrapper(QtGui.QStandardItem('Item 1.2'))
-        treeview.model.root_item.category2.item1 = OTreeWrapper(QtGui.QStandardItem('Item 2.1'))
-        treeview.model.root_item.category2.item2 = OTreeWrapper(QtGui.QStandardItem('Item 2.2'))
-        treeview.model.root_item.category2.item3 = OTreeWrapper(QtGui.QStandardItem('Item 2.3'))
-        treeview.model.root_item.category2.category1 = OTreeWrapper(QtGui.QStandardItem('Category 2.1'))
-        treeview.model.root_item.category2.category1.item1 = OTreeWrapper(QtGui.QStandardItem('Item 2.1.1'))
-        treeview.model.root_item.category2.category1.item2 = OTreeWrapper(QtGui.QStandardItem('Item 2.1.2'))
-        treeview.model.root_item.category2.category1.item3 = OTreeWrapper(QtGui.QStandardItem('Item 2.1.3'))
+        treeview = QTreeWrapper(QtWidgets.QTreeView())
+        treeview.model = QTreeWrapper(QtGui.QStandardItemModel())
+        treeview.model.root_item = QTreeWrapper(treeview.model.node.invisibleRootItem())
+        treeview.model.root_item.category1 = QTreeWrapper(QtGui.QStandardItem('Category 1'))
+        treeview.model.root_item.category2 = QTreeWrapper(QtGui.QStandardItem('Category 2'))
+        treeview.model.root_item.category1.item1 = QTreeWrapper(QtGui.QStandardItem('Item 1.1'))
+        treeview.model.root_item.category1.item2 = QTreeWrapper(QtGui.QStandardItem('Item 1.2'))
+        treeview.model.root_item.category2.item1 = QTreeWrapper(QtGui.QStandardItem('Item 2.1'))
+        treeview.model.root_item.category2.item2 = QTreeWrapper(QtGui.QStandardItem('Item 2.2'))
+        treeview.model.root_item.category2.item3 = QTreeWrapper(QtGui.QStandardItem('Item 2.3'))
+        treeview.model.root_item.category2.category1 = QTreeWrapper(QtGui.QStandardItem('Category 2.1'))
+        treeview.model.root_item.category2.category1.item1 = QTreeWrapper(QtGui.QStandardItem('Item 2.1.1'))
+        treeview.model.root_item.category2.category1.item2 = QTreeWrapper(QtGui.QStandardItem('Item 2.1.2'))
+        treeview.model.root_item.category2.category1.item3 = QTreeWrapper(QtGui.QStandardItem('Item 2.1.3'))
         OTreeWrapper.progeny(treeview.model.root_item)
 
         # WIDGETS
@@ -121,4 +127,3 @@ if __name__ == "__main__":
     window = Window()
     window.show()
     sys.exit(app.exec_())
-
