@@ -14,10 +14,10 @@ class Window(QtWidgets.QWidget):
         font2 = self.widgets['widget2'].font(); font2.setFamily('Times New Roman'); font2.setBold(True)
         self.widgets['widget1'].setFont(font1)
         self.widgets['widget2'].setFont(font2)
+        self.widgets['widget3'].setFrameShape(QtWidgets.QFrame.Panel)
         self.widgets['widget1'].setAlignment(QtCore.Qt.AlignCenter)
         self.widgets['widget2'].setAlignment(QtCore.Qt.AlignVCenter)
         self.widgets['widget3'].setText('Third Label')
-
 
         # LAYOUTS
         layout = QtWidgets.QVBoxLayout()
