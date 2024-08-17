@@ -7,8 +7,8 @@ class Window(QtWidgets.QWidget):
         widget = QtWidgets.QTableWidget()
         widget.setRowCount(20)
         widget.setColumnCount(4)
-        for i in range(20):
-            for j in range(4):
+        for i in range(widget.rowCount()):
+            for j in range(widget.columnCount()):
                 widget.setItem(i, j, QtWidgets.QTableWidgetItem(str(i+j)))
         widget.horizontalHeader().setSectionResizeMode(QtWidgets.QHeaderView.Stretch)
 
@@ -30,4 +30,3 @@ if __name__ == "__main__":
     window = Window()
     window.show()
     sys.exit(app.exec_())
-                                                                                                                                                     66,25         Bot 
