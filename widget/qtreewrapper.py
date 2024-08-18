@@ -1,10 +1,12 @@
 from abc import *
 
 class OTreeWrapper(metaclass=ABCMeta):
-    def __init__(self, node=None):
+    def __init__(self, node=None, note=None):
         self.node = node
+        self.note = note
         self.generation = 0
-
+        self.name = 'ROOT'
+        
     def __iter__(self):
         return self
 
@@ -47,18 +49,17 @@ class OTreeWrapper(metaclass=ABCMeta):
 
     @classmethod
     def progeny(cls, self):
+        self.tree = list([self.name])
         children = cls.posterity(self)
         while children:
             _children = list()
             for child in children:
+                self.tree.append('.'.join(child.ascendants + [child.name]))
                 _children.extend(cls.posterity(child))
             children = _children
-
+            
     @classmethod
     def posterity(cls, self):
-        if self.generation == 0:
-            self.name = 'ROOT'
-
         members = list(filter(lambda x: not x.startswith('_OTreeWrapper__') and x != 'parent' and x != 'sibling' and x != 'name', dir(self)))
         self.children = dict(map(lambda x: (x, getattr(self, x)), filter(lambda x: isinstance(getattr(self, x), cls), members)))
         for order, (name, child) in enumerate(self.children.items()):
