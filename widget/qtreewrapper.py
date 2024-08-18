@@ -5,6 +5,7 @@ class OTreeWrapper(metaclass=ABCMeta):
         self.node = node
         self.note = note
         self.generation = 0
+        self.ascendants = list([''])
         self.name = 'ROOT'
         
     def __iter__(self):
@@ -19,7 +20,7 @@ class OTreeWrapper(metaclass=ABCMeta):
         - ACCESS SPECIFIER: {'.'.join(self.ascendants)}.{self.name}
         - GENERATION: {self.generation} + 1
         - ASCENDANTS: {'.'.join(self.ascendants)}
-        - PARENT: {self.parent.name}
+        - PARENT: {self.__parent.name if hasattr(self, 'parent') else None}
         """
         return representation
 
@@ -81,19 +82,21 @@ class QTreeWrapper(OTreeWrapper):
     def connection(self, child):
         pass
         
-root = QTreeWrapper()
-root.a = QTreeWrapper()
-root.a.a = QTreeWrapper()
-root.a.b = QTreeWrapper()
-root.a.b.a = QTreeWrapper()
-root.a.b.b = QTreeWrapper()
-root.a.b.b.a = QTreeWrapper()
-root.a.c = QTreeWrapper()
-root.a.d = QTreeWrapper()
-root.b = QTreeWrapper()
-root.b.a = QTreeWrapper()
-root.b.b = QTreeWrapper()
-root.b.c = QTreeWrapper()
-QTreeWrapper.progeny(root)
+qtree = QTreeWrapper()
+qtree.a = QTreeWrapper()
+qtree.a.a = QTreeWrapper()
+qtree.a.b = QTreeWrapper()
+qtree.a.b.a = QTreeWrapper()
+qtree.a.b.b = QTreeWrapper()
+qtree.a.b.b.a = QTreeWrapper()
+qtree.a.c = QTreeWrapper()
+qtree.a.d = QTreeWrapper()
+qtree.b = QTreeWrapper()
+qtree.b.a = QTreeWrapper()
+qtree.b.b = QTreeWrapper()
+qtree.b.c = QTreeWrapper()
+QTreeWrapper.progeny(qtree)
 
-print(root.a.b.b.a)
+print(qtree.a.b.b.a)
+print(qtree)
+print(qtree.tree)
