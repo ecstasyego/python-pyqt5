@@ -11,7 +11,28 @@
   - mouseReleaseEvent
 - Window
   - moveEvent
-  - resizeEvent	
+  - resizeEvent
+  - closeEvent
+  - showEvent
+  - hideEvent
+- Focus
+  - focusInEvent
+  - focusOutEvent
+- Drag
+  - dragEnterEvent
+  - dragMoveEvent
+  - dragLeaveEvent
+  - dropEvent
+- Timer
+  - timerEvent
+- File
+  - dropEvent
+- ETC
+  - contextMenuEvent
+  - wheelEvent
+  - enterEvent
+  - leaveEvent
+
 
 ```python
 from PyQt5 import QtCore, QtGui, QtWidgets
