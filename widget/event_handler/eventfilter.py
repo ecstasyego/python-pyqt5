@@ -1,5 +1,15 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
+"""
+[PyQt5.QtCore.QEvent]
+- QEvent.None, QEvent.FocusIn, QEvent.FocusOut,
+- QEvent.MouseButtonPress, QEvent.MouseButtonRelease, QEvent.MouseButtonDblClick, QEvent.MouseMove,
+- QEvent.KeyPress, QEvent.KeyRelease,
+- QEvent.Enter, QEvent.Close, QEvent.Leave, QEvent.Resize, QEvent.Move, QEvent.Paint, QEvent.Wheel,
+- QEvent.WindowStateChange,
+- QEvent.Show, QEvent.Hide, QEvent.ContextMenu
+"""
+
 class CustomEventFilter(QtCore.QObject):
     def eventFilter(self, obj, event):
         if event.type() == QtCore.QEvent.MouseButtonPress:
