@@ -6,7 +6,6 @@ class Window(QtWidgets.QMainWindow):
         self.setCentralWidget(QtWidgets.QWidget(self))
         self.setMenuBar(QtWidgets.QMenuBar(self))
         self.setStatusBar(QtWidgets.QStatusBar(self))
-        QtCore.QMetaObject.connectSlotsByName(self)
 
         toolbar = self.addToolBar('Exit')
         toolbar.addAction(QtWidgets.QAction(QtGui.QIcon('exit.png'), 'Exit', self))
