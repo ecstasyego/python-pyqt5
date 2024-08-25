@@ -11,6 +11,8 @@ class Window(QtWidgets.QWidget):
         new_size = event.size()
         print(f"Widget resized to {new_size.width()}x{new_size.height()}")
 
+        if self.isMaximized():
+            print(f"Maximized widget, resized to {new_size.width()}x{new_size.height()}")
 
 if __name__ == "__main__":
     import sys
