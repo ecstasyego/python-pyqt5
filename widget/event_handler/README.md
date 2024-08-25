@@ -19,6 +19,7 @@
     - showEvent
     - hideEvent
   - Widget
+    - changeEvent
     - enterEvent
     - leaveEvent
     - paintEvent
