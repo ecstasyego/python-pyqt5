@@ -6,12 +6,12 @@ class Window(QtWidgets.QWidget):
         self.setLayout(QtWidgets.QVBoxLayout()) # LAYOUT
         self.setGeometry(300, 300, 300, 200)
 
-    def keyPressEvent(self, e):
-        if e.key() == QtCore.Qt.Key_Escape:
+    def keyPressEvent(self, event):
+        if event.key() == QtCore.Qt.Key_Escape:
             self.close()
-        elif e.key() == QtCore.Qt.Key_F:
+        elif event.key() == QtCore.Qt.Key_F:
             self.showFullScreen()
-        elif e.key() == QtCore.Qt.Key_N:
+        elif event.key() == QtCore.Qt.Key_N:
             self.showNormal()
 
 
