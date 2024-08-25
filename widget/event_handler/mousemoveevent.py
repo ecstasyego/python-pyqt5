@@ -4,22 +4,12 @@ class Window(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
         self.setMouseTracking(True)
-
-        # WIDGETS
-        self.widgets = dict()
-        self.widgets['widget'] = QtWidgets.QStatusBar(self)
-
-        # LAYOUT
-        layout = QtWidgets.QVBoxLayout()
-        layout.addWidget(self.widgets['widget'])
-        layout.addStretch(1)
-        self.setLayout(layout)
+        self.setLayout(QtWidgets.QVBoxLayout()) # LAYOUT
         self.setGeometry(300, 300, 300, 200)
 
-    def mouseMoveEvent(self, e):
-        x = e.x(); y = e.y()
-        self.widgets['widget'].showMessage(f'X: {x}, Y: {y}', 1000)
-
+    def mouseMoveEvent(self, event: QtGui.QMouseEvent):
+        pos = event.pos()
+        print(f"Mouse moved to: ({pos.x()}, {pos.y()})")
 
 
 if __name__ == "__main__":
