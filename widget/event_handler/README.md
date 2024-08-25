@@ -1,36 +1,39 @@
 ## Event Handler
 [QEvent](https://doc.qt.io/qt-5/qevent.html)  
 
-- [QKeyEvent](https://doc.qt.io/qt-5/qkeyevent.html)
-  - keyPressEvent
-  - keyReleaseEvent
-- [QMouseEvent](https://doc.qt.io/qt-5/qmouseevent.html)
-  - mouseDoubleClickEvent
-  - mouseMoveEvent
+- event
+  - [QKeyEvent](https://doc.qt.io/qt-5/qkeyevent.html)
+    - keyPressEvent
+    - keyReleaseEvent
+  - [QMouseEvent](https://doc.qt.io/qt-5/qmouseevent.html)
+    - mouseDoubleClickEvent
+    - mouseMoveEvent
+    - mousePressEvent
+    - mouseReleaseEvent
+      - contextMenuEvent
+    - wheelEvent 
+  - Window
+    - moveEvent
+    - resizeEvent
+    - closeEvent
+    - showEvent
+    - hideEvent
+  - Widget
     - enterEvent
     - leaveEvent
-  - mousePressEvent
-  - mouseReleaseEvent
-    - contextMenuEvent
-  - wheelEvent 
-- Window
-  - moveEvent
-  - resizeEvent
-  - closeEvent
-  - showEvent
-  - hideEvent
-- Focus
-  - focusInEvent
-  - focusOutEvent
-- Drag
-  - dragEnterEvent
-  - dragMoveEvent
-  - dragLeaveEvent
-  - dropEvent
-- Timer
-  - timerEvent
-- File
-  - dropEvent
+    - paintEvent
+  - Focus
+    - focusInEvent
+    - focusOutEvent
+  - Drag
+    - dragEnterEvent
+    - dragMoveEvent
+    - dragLeaveEvent
+    - dropEvent
+  - Timer
+    - timerEvent
+  - File
+    - dropEvent
 
 
 ```python
