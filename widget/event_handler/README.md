@@ -7,8 +7,12 @@
 - [QMouseEvent](https://doc.qt.io/qt-5/qmouseevent.html)
   - mouseDoubleClickEvent
   - mouseMoveEvent
+    - enterEvent
+    - leaveEvent
   - mousePressEvent
   - mouseReleaseEvent
+    - contextMenuEvent
+  - wheelEvent 
 - Window
   - moveEvent
   - resizeEvent
@@ -27,11 +31,6 @@
   - timerEvent
 - File
   - dropEvent
-- ETC
-  - contextMenuEvent
-  - wheelEvent
-  - enterEvent
-  - leaveEvent
 
 
 ```python
