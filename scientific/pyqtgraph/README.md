@@ -8,15 +8,13 @@ import numpy as np
 class Window(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
-        # WIDGETS
-        widget = pg.PlotWidget()
-        
         x = np.arange(1000)
         y = np.random.normal(size=1000)
-        widget.plot(x, y)
-        widget.setLabel('bottom', 'X')
-        widget.setLabel('left', 'Y')
 
+        # WIDGETS
+        widget = pg.PlotWidget()
+        widget.plot(x, y)
+        
         # LAYOUTS
         layout = QtWidgets.QVBoxLayout()
         layout.addWidget(widget)
