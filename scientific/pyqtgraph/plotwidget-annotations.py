@@ -13,9 +13,12 @@ class Window(QtWidgets.QWidget):
         y = np.random.normal(size=1000)
         widget.plot(x, y)
 
-        arrow = pg.ArrowItem(angle=-180, tipAngle=60, headLen=10, pen=None, brush='r')
-        arrow.setPos(999, y[999])
+        arrow = pg.ArrowItem(pos=(999, y[999]), angle=-180, tipAngle=60, headLen=20, headWidth=10, pen=pg.mkPen('r', width=2), brush='r')
+        text = pg.TextItem(text="Hello PyQtGraph", color='r', anchor=(0.5, 0.5)); text.setPos(500, y[500])
+        label = pg.LabelItem("This is a <b>LabelItem</b><br>with <i>HTML</i> formatting", color='w', size='14pt', anchor=(0.5, 0.5)); label.setPos(0, y[0])
         widget.addItem(arrow)
+        widget.addItem(text)
+        widget.addItem(label)
 
         # LAYOUTS
         layout = QtWidgets.QVBoxLayout()
