@@ -10,9 +10,11 @@ class Window(QtWidgets.QWidget):
         self.timer.start(500)  # Update every 500 ms
 
         # WIDGETS
-        x = np.arange(1000)
-        y = np.random.normal(size=1000)
         widget = pg.PlotWidget()
+
+        # PLOT
+        x = np.arange(1000)
+        y = np.random.normal(size=1000)        
         self.plotitem = widget.plot(x, y)
 
         # LAYOUTS
