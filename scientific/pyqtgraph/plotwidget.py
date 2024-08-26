@@ -7,7 +7,12 @@ class Window(QtWidgets.QWidget):
         super().__init__()
         # WIDGETS
         widget = pg.PlotWidget()
-        widget.plot(np.arange(1000), np.random.normal(size=1000))
+        
+        x = np.arange(1000)
+        y = np.random.normal(size=1000)
+        widget.plot(x, y)
+        widget.setLabel('bottom', 'X')
+        widget.setLabel('left', 'Y')
 
         # LAYOUTS
         layout = QtWidgets.QVBoxLayout()
@@ -16,9 +21,6 @@ class Window(QtWidgets.QWidget):
 
         self.setLayout(layout)
         self.setGeometry(300, 300, 300, 200)
-
-    def callback(self):
-        pass
 
 if __name__ == "__main__":
     import sys
