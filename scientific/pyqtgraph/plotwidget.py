@@ -5,12 +5,15 @@ import numpy as np
 class Window(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
-        # WIDGETS
-        widget = pg.PlotWidget()
-        
+        # WIDGETS        
         x = np.arange(1000)
         y = np.random.normal(size=1000)
+        
+        widget = pg.PlotWidget()
         widget.plot(x, y)
+        
+        widget.setBackground('w')
+        widget.setTitle("Title")
         widget.setLabel('bottom', 'X')
         widget.setLabel('left', 'Y')
 
