@@ -7,10 +7,11 @@ import datetime
 class Window(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
-        # WIDGETS
+        # DATA
         x = np.arange(20)
         y = np.random.randint(low=0, high=100, size=20)
 
+        # WIDGETS
         widget = pg.PlotWidget()
         widget.addItem(pg.BarGraphItem(x=x, height=y, width=0.3, pen=None, brush='b'))
 
