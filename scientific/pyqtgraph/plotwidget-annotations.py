@@ -13,6 +13,7 @@ class Window(QtWidgets.QWidget):
         y = np.random.normal(size=1000)
         widget.plot(x, y)
 
+        # ANNOTATIONS
         arrow = pg.ArrowItem(pos=(999, y[999]), angle=-180, tipAngle=60, headLen=20, headWidth=10, pen=pg.mkPen('r', width=2), brush='r')
         text = pg.TextItem(text="Hello PyQtGraph", color='r', anchor=(0.5, 0.5)); text.setPos(500, y[500])
         label = pg.LabelItem("This is a <b>LabelItem</b><br>with <i>HTML</i> formatting", color='w', size='14pt', anchor=(0.5, 0.5)); label.setPos(0, y[0])
