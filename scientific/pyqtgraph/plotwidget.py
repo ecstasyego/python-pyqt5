@@ -17,9 +17,12 @@ class Window(QtWidgets.QWidget):
         # PLOT
         x = np.arange(1000)
         y = np.random.normal(size=1000)
-        widget.plot(x=x, y=2*y, pen=pg.mkPen(width=2, color='r'), name="plot1")
-        widget.plot(x=x, y=y, pen=pg.mkPen(width=2, color='b'), name="plot2")
-
+        widget.plot(x=x, y=2*y,
+                    symbol=['o', 't', 't1', 's', 'x'][0], symbolSize=5, symbolBrush='r', symbolPen=None,
+                    pen=pg.mkPen(width=2, color='r'), name="plot1")
+        widget.plot(x=x, y=1*y,
+                    symbol=['o', 't', 't1', 's', 'x'][0], symbolSize=5, symbolBrush='b', symbolPen=None,
+                    pen=pg.mkPen(width=2, color='b'), name="plot2")
         # LAYOUTS
         layout = QtWidgets.QVBoxLayout()
         layout.addWidget(widget)
