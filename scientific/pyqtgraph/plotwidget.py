@@ -16,7 +16,9 @@ class Window(QtWidgets.QWidget):
         widget.setTitle("Title")
         widget.setLabel('bottom', 'X')
         widget.setLabel('left', 'Y')
-
+        widget.addLegend()
+        widget.showGrid(x=True, y=True)
+        
         # LAYOUTS
         layout = QtWidgets.QVBoxLayout()
         layout.addWidget(widget)
