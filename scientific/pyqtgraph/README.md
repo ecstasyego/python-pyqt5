@@ -8,12 +8,12 @@ import numpy as np
 class Window(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
-        # DATA
-        x = np.arange(1000)
-        y = np.random.normal(size=1000)
-
         # WIDGETS
         widget = pg.PlotWidget()
+
+        # PLTO
+        x = np.arange(1000)
+        y = np.random.normal(size=1000)
         widget.plot(x, y)
         
         # LAYOUTS
