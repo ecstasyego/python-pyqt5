@@ -11,7 +11,7 @@ class Window(QtWidgets.QWidget):
         # WIDGETS
         widget = pg.PlotWidget()
 
-        # PLTO
+        # PLOT
         x = np.arange(1000)
         y = np.random.normal(size=1000)
         widget.plot(x, y)
