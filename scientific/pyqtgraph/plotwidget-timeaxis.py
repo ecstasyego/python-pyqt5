@@ -15,6 +15,8 @@ class Window(QtWidgets.QWidget):
         widget = pg.PlotWidget(axisItems={'bottom': pg.DateAxisItem()})
         widget.plot(x, y)
         
+        widget.setBackground('w')
+        widget.setTitle("Title")
         widget.setLabel('bottom', 'X')
         widget.setLabel('left', 'Y')
 
