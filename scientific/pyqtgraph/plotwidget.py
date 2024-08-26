@@ -5,20 +5,21 @@ import numpy as np
 class Window(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
-        # WIDGETS        
-        x = np.arange(1000)
-        y = np.random.normal(size=1000)
-        
+        # WIDGETS
         widget = pg.PlotWidget()
-        widget.plot(x, y)
-        
         widget.setBackground('w')
         widget.setTitle("Title")
         widget.setLabel('bottom', 'X')
         widget.setLabel('left', 'Y')
         widget.addLegend()
         widget.showGrid(x=True, y=True)
-        
+
+        # PLOT
+        x = np.arange(1000)
+        y = np.random.normal(size=1000)
+        widget.plot(x=x, y=2*y, pen=pg.mkPen(width=2, color='r'), name="plot1")
+        widget.plot(x=x, y=y, pen=pg.mkPen(width=2, color='b'), name="plot2")
+
         # LAYOUTS
         layout = QtWidgets.QVBoxLayout()
         layout.addWidget(widget)
