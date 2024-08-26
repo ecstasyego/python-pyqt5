@@ -2,17 +2,17 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 import pyqtgraph as pg
 import numpy as np
 import pandas as pd
+import datetime
 
 class Window(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
         # WIDGETS
-        widget = pg.PlotWidget()
+        widget = pg.PlotWidget(axisItems={'bottom': pg.DateAxisItem()})
 
-        x = pd.date_range(end='2022-12-31', periods=1000, freq='D').values
+        x = pd.date_range(end='2022-12-31', periods=1000, freq='D').astype(int) // 10**9
         y = np.random.normal(size=1000)
         widget.plot(x, y)
-        widget.setAxisItems({'bottom': pg.DateAxisItem()})
         widget.setLabel('bottom', 'X')
         widget.setLabel('left', 'Y')
 
