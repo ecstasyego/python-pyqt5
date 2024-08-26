@@ -7,21 +7,20 @@ import datetime
 class Window(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
-        # DATA
-        x = pd.date_range(end='2022-12-31', periods=1000, freq='D').astype(int) // 10**9
-        y = np.random.normal(size=1000)
-
         # WIDGETS
-        widget = pg.PlotWidget(axisItems={'bottom': pg.DateAxisItem()})
-        widget.plot(x, y)
-        
+        widget = pg.PlotWidget(axisItems={'bottom': pg.DateAxisItem()})        
         widget.setBackground('w')
         widget.setTitle("Title")
         widget.setLabel('bottom', 'X')
         widget.setLabel('left', 'Y')
         widget.addLegend()
         widget.showGrid(x=True, y=True)
-        
+
+        # PLOT
+        x = pd.date_range(end='2022-12-31', periods=1000, freq='D').astype(int) // 10**9
+        y = np.random.normal(size=1000)
+        widget.plot(x, y)
+
         # LAYOUTS
         layout = QtWidgets.QVBoxLayout()
         layout.addWidget(widget)
