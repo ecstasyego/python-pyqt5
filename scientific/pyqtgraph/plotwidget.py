@@ -6,7 +6,7 @@ class Window(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
         # WIDGETS
-        widget = pg.PlotWidget()
+        widget = pg.PlotWidget(axisItems={'left':pg.AxisItem(orientation='left'), 'bottom':pg.AxisItem(orientation='bottom')})
         widget.setBackground('w')
         widget.setTitle("Title")
         widget.setLabel('bottom', 'X')
