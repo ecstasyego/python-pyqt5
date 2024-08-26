@@ -7,12 +7,14 @@ import datetime
 class Window(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
-        # WIDGETS
-        widget = pg.PlotWidget(axisItems={'bottom': pg.DateAxisItem()})
-
+        # DATA
         x = pd.date_range(end='2022-12-31', periods=1000, freq='D').astype(int) // 10**9
         y = np.random.normal(size=1000)
+
+        # WIDGETS
+        widget = pg.PlotWidget(axisItems={'bottom': pg.DateAxisItem()})
         widget.plot(x, y)
+        
         widget.setLabel('bottom', 'X')
         widget.setLabel('left', 'Y')
 
