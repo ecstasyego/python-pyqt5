@@ -6,7 +6,7 @@ class Window(QtWidgets.QWidget):
         widget = QtWidgets.QTextEdit()
         layout = QtWidgets.QVBoxLayout()
         layout.addWidget(widget)
-        layout.setContentsMargins(0, 0, 0, 0)
+        layout.setContentsMargins(0, 0, 0, 0) # left, top, right, bottom
 
         self.setLayout(layout) # LAYOUT
         self.setGeometry(300, 300, 300, 200)
