@@ -27,6 +27,7 @@ class Window(QtWidgets.QWidget):
         # WIDGETS
         widget = QtWidgets.QColumnView()
         widget.setModel(model)
+        widget.setSelectionMode(QtWidgets.QAbstractItemView.ExtendedSelection)
 
         # LAYOUTS
         layout = QtWidgets.QVBoxLayout()
