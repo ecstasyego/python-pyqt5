@@ -16,6 +16,10 @@ class Window(QtWidgets.QWidget):
         widget.setModel(model)
         widget.setSelectionMode(QtWidgets.QAbstractItemView.ExtendedSelection)
 
+        # retrieve model
+        widget.model()
+        widget.selectionModel()
+        
         # LAYOUTS
         layout = QtWidgets.QVBoxLayout()
         layout.addWidget(widget)
