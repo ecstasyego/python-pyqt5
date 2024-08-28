@@ -14,6 +14,7 @@ class Window(QtWidgets.QWidget):
         # WIDGETS
         widget = QtWidgets.QListView()
         widget.setModel(model)
+        widget.setSelectionMode(QtWidgets.QAbstractItemView.ExtendedSelection)
 
         # LAYOUTS
         layout = QtWidgets.QVBoxLayout()
@@ -23,10 +24,10 @@ class Window(QtWidgets.QWidget):
 
     def callback(self):
         pass
-        
+
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-                                                                                                                                                                           window = Window()
+    window = Window()
     window.show()
-    sys.exit(app.exec_())                                                                                                                                              
+    sys.exit(app.exec_())
