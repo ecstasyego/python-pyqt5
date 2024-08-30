@@ -7,7 +7,7 @@ class Window(QtWidgets.QWidget):
         self.setGeometry(300, 300, 300, 200)
 
     def keyPressEvent(self, event):
-        if event.key() == Qt.Key_Return or event.key() == Qt.Key_Enter:
+        if event.key() == QtCore.Qt.Key_Return or event.key() == QtCore.Qt.Key_Enter:
             self.callback()
         elif event.key() == QtCore.Qt.Key_Escape:
             self.close()
@@ -18,7 +18,7 @@ class Window(QtWidgets.QWidget):
 
     def callback(self):
         pass
-        
+
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
