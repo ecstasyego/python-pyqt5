@@ -7,14 +7,18 @@ class Window(QtWidgets.QWidget):
         self.setGeometry(300, 300, 300, 200)
 
     def keyPressEvent(self, event):
-        if event.key() == QtCore.Qt.Key_Escape:
+        if event.key() == Qt.Key_Return or event.key() == Qt.Key_Enter:
+            self.callback()
+        elif event.key() == QtCore.Qt.Key_Escape:
             self.close()
         elif event.key() == QtCore.Qt.Key_F:
             self.showFullScreen()
         elif event.key() == QtCore.Qt.Key_N:
             self.showNormal()
 
-
+    def callback(self):
+        pass
+        
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
