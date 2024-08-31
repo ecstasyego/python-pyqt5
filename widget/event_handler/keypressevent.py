@@ -9,6 +9,8 @@ class Window(QtWidgets.QWidget):
     def keyPressEvent(self, event):
         if event.key() == QtCore.Qt.Key_Return or event.key() == QtCore.Qt.Key_Enter:
             self.callback()
+        elif event.key() == QtCore.Qt.Key_Tab:
+            self.callback()
         elif event.key() == QtCore.Qt.Key_Escape:
             self.close()
         elif event.key() == QtCore.Qt.Key_F:
