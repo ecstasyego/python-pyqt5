@@ -17,10 +17,16 @@ class Window(QtWidgets.QWidget):
             self.showFullScreen()
         elif event.key() == QtCore.Qt.Key_N:
             self.showNormal()
+        elif event.modifiers() == QtCore.Qt.ShiftModifier:
+            self.callback()
+        elif event.modifiers() == QtCore.Qt.ControlModifier:
+            self.callback()
+        elif event.modifiers() == QtCore.Qt.AltModifier:
+            self.callback()
 
     def callback(self):
         pass
-
+        
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
