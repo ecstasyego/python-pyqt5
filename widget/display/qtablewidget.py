@@ -5,11 +5,13 @@ class Window(QtWidgets.QWidget):
         super().__init__()
         # WIDGETS
         widget = QtWidgets.QTableWidget()
-        widget.setRowCount(20)
+        widget.setRowCount(5)
         widget.setColumnCount(4)
         for i in range(widget.rowCount()):
             for j in range(widget.columnCount()):
                 widget.setItem(i, j, QtWidgets.QTableWidgetItem(str(i+j)))
+        widget.setHorizontalHeaderLabels(['Column 1', 'Column 2', 'Column 3', 'Column 4'])
+        widget.setVerticalHeaderLabels(['Row 1', 'Row 2', 'Row 3', 'Row 4', 'Row 5'])
         widget.horizontalHeader().setSectionResizeMode(QtWidgets.QHeaderView.Stretch)
 
         # LAYOUTS
