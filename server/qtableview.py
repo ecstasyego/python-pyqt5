@@ -3,7 +3,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets, QtSql
 class Window(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
-        # Database
+        # DATABASE
         db = QtSql.QSqlDatabase.addDatabase("QSQLITE")
         db.setDatabaseName("example.db")
         db.open()
@@ -39,7 +39,7 @@ class Window(QtWidgets.QWidget):
             print(f"ID: {user_id}, Name: {name}, Age: {age}")
 
 
-        # Model
+        # MODEL
         model = QtSql.QSqlTableModel()
         model.setTable("users")
         model.select()
