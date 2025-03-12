@@ -7,7 +7,7 @@ QSqlDatabase.drivers() # 'QSQLITE', 'QMARIADB', 'QMYSQL', 'QMYSQL3', 'QPSQL', 'Q
 ```
 
 
-### Sqlite3
+### Local File System: Sqlite3
 ```python
 from PyQt5.QtSql import QSqlDatabase, QSqlQuery
 
@@ -34,4 +34,6 @@ query.exec_(
 db.close()
 ```
 
-### MySQL
+### Remote: MySQL
+```python
+```
