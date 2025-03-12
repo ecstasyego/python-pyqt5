@@ -10,6 +10,15 @@ class Window(QtWidgets.QWidget):
 
         # Query
         query = QtSql.QSqlQuery()
+        query.exec_(
+            """
+            CREATE TABLE IF NOT EXISTS users (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                name TEXT,
+                age INTEGER
+            )
+            """
+        )
         query.exec_("DELETE FROM users")
 
         # Query(1): Insert
