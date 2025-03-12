@@ -13,6 +13,9 @@ export DISPLAY=:0
 qt-designer: https://build-system.fman.io/qt-designer-download
 ```bash
 sudo apt install libxkbcommon-x11-0 libqt5gui5
+sudo apt install --reinstall libgl1 libglx-mesa0
+```
+```bash
 pip install PyQt5
 ```
 
