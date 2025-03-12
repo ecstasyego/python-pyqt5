@@ -1,7 +1,11 @@
 # python-pyqt5
+```bash
+sudo apt install libxkbcommon-x11-0 libqt5gui5
+```
 
 **Display**  
-xming xserver: https://sourceforge.net/projects/xming/
+xming xserver: https://sourceforge.net/projects/xming/  
+`~/.bashrc`
 ```bash
 export LIBGL_ALWAYS_INDIRECT=
 export DISPLAY=:0
