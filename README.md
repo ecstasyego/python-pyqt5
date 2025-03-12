@@ -1,7 +1,4 @@
 # python-pyqt5
-```bash
-sudo apt install libxkbcommon-x11-0 libqt5gui5
-```
 
 **Display**  
 xming xserver: https://sourceforge.net/projects/xming/  
@@ -15,6 +12,7 @@ export DISPLAY=:0
 **Installation**  
 qt-designer: https://build-system.fman.io/qt-designer-download
 ```bash
+sudo apt install libxkbcommon-x11-0 libqt5gui5
 pip install PyQt5
 ```
 
