@@ -8,6 +8,28 @@ class Window(QtWidgets.QWidget):
         db.setDatabaseName("example.db")
         db.open()
 
+        # Query
+        query = QtSql.QSqlQuery()
+        query.exec_("DELETE FROM users")
+
+        # Query(1): Insert
+        query.prepare("INSERT INTO users (name, age) VALUES (?, ?)")
+        query.addBindValue("Alice")
+        query.addBindValue(25)
+        query.exec_()
+
+        query.addBindValue("Bob")
+        query.addBindValue(30)
+        query.exec_()
+
+        # Query(2): Search
+        while query.next():
+            user_id = query.value(0)
+            name = query.value(1)
+            age = query.value(2)
+            print(f"ID: {user_id}, Name: {name}, Age: {age}")
+
+
         # Model
         model = QtSql.QSqlTableModel()
         model.setTable("users")
