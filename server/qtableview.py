@@ -3,6 +3,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets, QtSql
 class Window(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
+        
         # DATABASE
         db = QtSql.QSqlDatabase.addDatabase("QSQLITE")
         db.setDatabaseName("example.db")
