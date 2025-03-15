@@ -37,7 +37,7 @@ pyinstaller -F main.py # -onefile
 pyinstaller -w -F main.py # --windowed -onefile
 ```
 
-**QWindow**
+**QMainWindow**
 ```python
 from PyQt5 import QtCore, QtGui, QtWidgets
 
