@@ -36,6 +36,28 @@
   - File
     - dropEvent
 
+```python
+from PyQt5 import QtCore
+
+class Communicate(QtCore.QObject):
+    signal_int = QtCore.pyqtSignal(int)
+    signal_str = QtCore.pyqtSignal(str)
+
+    def __init__(self):
+        super().__init__()
+
+    def emit_signal(self):
+        self.signal_int.emit(42)
+        self.signal_str.emit("Hello, World!")
+
+def receive_slot(value):
+    print(f"SIGNAL: {value}")
+
+com = Communicate()
+com.signal_int.connect(receive_slot)
+com.signal_str.connect(receive_slot)
+com.emit_signal()
+```
 
 ```python
 from PyQt5 import QtCore, QtGui, QtWidgets
