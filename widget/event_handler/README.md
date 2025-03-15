@@ -43,6 +43,7 @@ class Communicate(QtCore.QObject):
     signal_int = QtCore.pyqtSignal(int)
     signal_str = QtCore.pyqtSignal(str)
     signal_composite = QtCore.pyqtSignal(int, str, float)
+    signals = QtCore.pyqtSignal((int,), (str,))
 
     def __init__(self):
         super().__init__()
@@ -51,6 +52,8 @@ class Communicate(QtCore.QObject):
         self.signal_int.emit(42)
         self.signal_str.emit("Hello")
         self.signal_composite.emit(100, "World", 3.14)
+        self.signals[int].emit(99)
+        self.signals[str].emit("Hello, World!")
 
 def receive_slot(*values):
     print(f"SIGNAL: {values}")
@@ -59,6 +62,15 @@ com = Communicate()
 com.signal_int.connect(receive_slot)
 com.signal_str.connect(receive_slot)
 com.signal_composite.connect(receive_slot)
+com.signals[int].connect(receive_slot)
+com.signals[str].connect(receive_slot)
+com.emit_signal()
+
+com.signal_int.disconnect(receive_slot)
+com.signal_str.disconnect(receive_slot)
+com.signal_composite.disconnect(receive_slot)
+com.signals[int].disconnect(receive_slot)
+com.signals[str].disconnect(receive_slot)
 com.emit_signal()
 ```
 
