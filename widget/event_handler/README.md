@@ -59,6 +59,7 @@ def receive_slot(*values):
     print(f"SIGNAL: {values}")
 
 com = Communicate()
+print("[Connection] Slot")
 com.signal_int.connect(receive_slot)
 com.signal_str.connect(receive_slot)
 com.signal_composite.connect(receive_slot)
@@ -66,11 +67,20 @@ com.signals[int].connect(receive_slot)
 com.signals[str].connect(receive_slot)
 com.emit_signal()
 
+print("[Disconnection]")
 com.signal_int.disconnect(receive_slot)
 com.signal_str.disconnect(receive_slot)
 com.signal_composite.disconnect(receive_slot)
 com.signals[int].disconnect(receive_slot)
 com.signals[str].disconnect(receive_slot)
+com.emit_signal()
+
+print("[Connection] Lambda")
+com.signal_int.connect(lambda *values: print(f"SIGNAL: {values}"))
+com.signal_str.connect(lambda *values: print(f"SIGNAL: {values}"))
+com.signal_composite.connect(lambda *values: print(f"SIGNAL: {values}"))
+com.signals[int].connect(lambda *values: print(f"SIGNAL: {values}"))
+com.signals[str].connect(lambda *values: print(f"SIGNAL: {values}"))
 com.emit_signal()
 ```
 
