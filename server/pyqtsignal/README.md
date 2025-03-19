@@ -22,8 +22,8 @@ class Window(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
         # SIGNAL
-        self.sender = Sender()
         self.receiver = Receiver()
+        self.sender = Sender()
         self.sender.signal.connect(self.receiver.receive_signal)
 
         # WIDGET
