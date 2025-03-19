@@ -8,7 +8,10 @@ class Window(QtWidgets.QWidget):
         self.setLayout(QtWidgets.QVBoxLayout()) # LAYOUT
         self.setGeometry(300, 300, 300, 200)
 
-        self.signal.connect(lambda *values: print(values))
+        receive_signal = lambda *values: print(values)
+        self.signal.connect(receive_signal)
+        self.signal.emit(42)
+        self.signal.disconnect(receive_signal)
         self.signal.emit(42)
 
 if __name__ == "__main__":
