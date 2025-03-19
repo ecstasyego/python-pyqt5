@@ -12,5 +12,5 @@ class Sender(QtCore.QObject):
         self.signal.emit(42)
 
 sender = Sender()
-sender.signal.connect(lambda *values: print(values))
-sender.send_signal()
+sender.signal.connect(lambda *values: print(values)) # [1] connect
+sender.send_signal() # [2] emit
