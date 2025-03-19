@@ -20,5 +20,5 @@ class Receiver(QtCore.QObject):
 
 receiver = Receiver()
 sender = Sender()
-sender.signal.connect(receiver.receive_signal)
-sender.send_signal()
+sender.signal.connect(receiver.receive_signal) # [1] connect
+sender.send_signal() # [2] emit
