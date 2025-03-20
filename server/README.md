@@ -11,8 +11,7 @@ QSqlDatabase.drivers() # 'QSQLITE', 'QMARIADB', 'QMYSQL', 'QMYSQL3', 'QPSQL', 'Q
 ```python
 from PyQt5.QtSql import QSqlDatabase, QSqlQuery
 
-useable_dbs = QSqlDatabase.drivers() 
-db = QSqlDatabase.addDatabase( useable_dbs[useable_dbs.index("QSQLITE")] )
+db = QSqlDatabase.addDatabase( "QSQLITE" )
 db.setDatabaseName("example.db")
 
 if not db.open():
