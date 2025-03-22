@@ -10,7 +10,7 @@ class Window(QtWidgets.QWidget):
         db.open()
 
         # Query
-        query = QtSql.QSqlQuery()
+        query = QtSql.QSqlQuery(db)
         query.exec_(
             """
             CREATE TABLE IF NOT EXISTS users (
