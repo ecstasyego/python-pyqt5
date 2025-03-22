@@ -16,7 +16,6 @@ query.exec_(
 )
 query.exec_("INSERT INTO users (name, age) VALUES ('Alice', 30)")
 query.exec_("INSERT INTO users (name, age) VALUES ('Bob', 25)")
-query.exec_("SELECT * FROM users")
 
 model = QtSql.QSqlTableModel()
 model.setTable("users") # model.setQuery( QSqlQuery("SELECT * FROM users") )
