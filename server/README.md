@@ -13,11 +13,7 @@ from PyQt5.QtSql import QSqlDatabase, QSqlQuery
 
 db = QSqlDatabase.addDatabase( "QSQLITE" )
 db.setDatabaseName(":memory:") # example.db, example.sqlite3, ...
-
-if not db.open():
-    print("DB Connection: Fail", db.lastError().text())
-else:
-    print("DB COnnection: Sucess")
+db.open()
 
 query = QSqlQuery()
 query.exec_(
@@ -29,6 +25,7 @@ query.exec_(
     )
     """
 )
+
 db.close()
 ```
 
@@ -53,11 +50,7 @@ db.setPort(3306)
 db.setDatabaseName("example")
 db.setUserName("testuser")
 db.setPassword("PASSWORD")
-
-if not db.open():
-    print("DB Connection: Fail", db.lastError().text())
-else:
-    print("DB COnnection: Sucess")
+db.open()
 
 query = QSqlQuery()
 query.exec_(
@@ -69,6 +62,7 @@ query.exec_(
     )
     """
 )
+
 db.close()
 ```
 
@@ -89,6 +83,8 @@ model.select()           # [DB QUERY]
 
 widget = QTableView()
 widget.setModel(model)
+
+db.close()
 ```
 
 `setQuery`
@@ -105,5 +101,7 @@ model.setQuery( QSqlQuery("SELECT * FROM users") ) # [DB TABLE QUERY]
 
 widget = QTableView()
 widget.setModel(model)
+
+db.close()
 ```
 
