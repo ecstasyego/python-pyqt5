@@ -14,6 +14,7 @@ query.exec_(
     )
     """
 )
+query.exec_("DELETE FROM users")
 query.prepare("INSERT INTO users (name, age) VALUES (?, ?)")
 
 query.addBindValue("Alice")
