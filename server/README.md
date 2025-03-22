@@ -12,7 +12,7 @@ QSqlDatabase.drivers() # 'QSQLITE', 'QMARIADB', 'QMYSQL', 'QMYSQL3', 'QPSQL', 'Q
 from PyQt5.QtSql import QSqlDatabase, QSqlQuery
 
 db = QSqlDatabase.addDatabase( "QSQLITE" )
-db.setDatabaseName("example.db")
+db.setDatabaseName(":memory:") # example.db, example.sqlite3, ...
 
 if not db.open():
     print("DB Connection: Fail")
