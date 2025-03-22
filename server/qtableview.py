@@ -6,7 +6,7 @@ class Window(QtWidgets.QWidget):
         
         # DATABASE
         db = QtSql.QSqlDatabase.addDatabase("QSQLITE")
-        db.setDatabaseName("example.db")
+        db.setDatabaseName(":memory:")
         db.open()
 
         # Query
