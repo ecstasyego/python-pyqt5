@@ -74,6 +74,7 @@ db.close()
 
 
 ### ViewModel
+`setTable`+`select`
 ```python
 from PyQt5.QtSql import QSqlDatabase, QSqlQuery, QSqlTableModel
 from PyQt5.QtWidgets import QTableView
@@ -90,6 +91,7 @@ widget = QTableView()
 widget.setModel(model)
 ```
 
+`setQuery`
 ```python
 from PyQt5.QtSql import QSqlDatabase, QSqlQuery, QSqlTableModel
 from PyQt5.QtWidgets import QTableView
