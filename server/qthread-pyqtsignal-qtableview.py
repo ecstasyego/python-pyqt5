@@ -3,9 +3,11 @@ from PyQt5 import QtCore, QtGui, QtWidgets, QtSql
 class Worker(QtCore.QThread):
     signal = QtCore.pyqtSignal(bool)  # Signal to send fetched data
 
-    def __init__(self, db):
+    def __init__(self):
         super().__init__()
-        self.db = db  # Pass the database connection to the worker
+        self.db = QtSql.QSqlDatabase.addDatabase("QSQLITE")
+        self.db.setDatabaseName(":memory:")
+        self.db.open()
 
     def run(self):
         query = QtSql.QSqlQuery(self.db)
@@ -24,6 +26,9 @@ class Worker(QtCore.QThread):
 
         self.signal.emit(True)  # Emit the signal for fetched data
 
+
+    def close(self):
+        self.db.close()
 
 class Window(QtWidgets.QWidget):
     def __init__(self):
@@ -48,7 +53,7 @@ class Window(QtWidgets.QWidget):
         self.setLayout(layout)
 
         # Database Worker
-        self.worker = Worker(self.db)  # Pass the main thread DB to the worker
+        self.worker = Worker()  # Pass the main thread DB to the worker
         self.worker.signal.connect(self.update_table)  # Connect signal to slot
         self.worker.start()  # Start the worker thread
 
@@ -60,6 +65,7 @@ class Window(QtWidgets.QWidget):
     def closeEvent(self, event):
         # Ensure the database connection is closed properly
         self.db.close()
+        self.worker.close()
         event.accept()
 
 
