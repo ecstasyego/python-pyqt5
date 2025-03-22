@@ -70,7 +70,6 @@ query.exec_(
     )
     """
 )
-
 db.close()
 ```
 
