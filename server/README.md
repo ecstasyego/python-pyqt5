@@ -34,5 +34,16 @@ db.close()
 ```
 
 ### Remote: MySQL
+`TCP/IP Socket Account`
+```mysql
+CREATE USER 'root'@'127.0.0.1' IDENTIFIED BY 'PASSWORD';
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'127.0.0.1' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+```
+
+```mysql
+CREATE DATABASE example;
+```
+
 ```python
 ```
