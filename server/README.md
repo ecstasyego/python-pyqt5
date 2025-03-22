@@ -14,6 +14,24 @@ from PyQt5.QtSql import QSqlDatabase, QSqlQuery
 db = QSqlDatabase.addDatabase( "QSQLITE" )
 db.setDatabaseName(":memory:") # example.db, example.sqlite3, ...
 
+query = QSqlQuery()
+query.exec_(
+    """
+    CREATE TABLE IF NOT EXISTS users (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT,
+        age INTEGER
+    )
+    """
+)
+db.close()
+```
+```python
+from PyQt5.QtSql import QSqlDatabase, QSqlQuery
+
+db = QSqlDatabase.addDatabase( "QSQLITE" )
+db.setDatabaseName("example.db") # example.db, example.sqlite3, ...
+
 if not db.open():
     print("DB Connection: Fail")
 else:
@@ -29,7 +47,6 @@ query.exec_(
     )
     """
 )
-
 db.close()
 ```
 
