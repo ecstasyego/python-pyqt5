@@ -31,29 +31,6 @@ query.exec_(
 )
 db.close()
 ```
-```python
-from PyQt5.QtSql import QSqlDatabase, QSqlQuery
-
-db = QSqlDatabase.addDatabase( "QSQLITE" )
-db.setDatabaseName("example.db") # example.db, example.sqlite3, ...
-
-if not db.open():
-    print("DB Connection: Fail")
-else:
-    print("DB COnnection: Sucess")
-
-query = QSqlQuery()
-query.exec_(
-    """
-    CREATE TABLE IF NOT EXISTS users (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        name TEXT,
-        age INTEGER
-    )
-    """
-)
-db.close()
-```
 
 ### Remote: MySQL
 `TCP/IP Socket Account`
