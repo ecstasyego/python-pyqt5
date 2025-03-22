@@ -15,7 +15,7 @@ db = QSqlDatabase.addDatabase( "QSQLITE" )
 db.setDatabaseName(":memory:") # example.db, example.sqlite3, ...
 
 if not db.open():
-    print("DB Connection: Fail")
+    print("DB Connection: Fail", db.lastError().text())
 else:
     print("DB COnnection: Sucess")
 
@@ -55,8 +55,7 @@ db.setUserName("testuser")
 db.setPassword("PASSWORD")
 
 if not db.open():
-    print("DB Connection: Fail")
-    print(db.lastError().text())
+    print("DB Connection: Fail", db.lastError().text())
 else:
     print("DB COnnection: Sucess")
 
