@@ -14,6 +14,7 @@ query.exec_(
     )
     """
 )
+query.exec_("DELETE FROM users")
 query.exec_("INSERT INTO users (name, age) VALUES ('Alice', 30)")
 query.exec_("INSERT INTO users (name, age) VALUES ('Bob', 25)")
 
