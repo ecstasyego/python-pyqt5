@@ -57,7 +57,7 @@ class Window(QtWidgets.QWidget):
         self.worker.signal.connect(self.update_table)  # Connect signal to slot
         self.worker.start()  # Start the worker thread
 
-    def update_table(self, data):
+    def update_table(self, *values):
         query = QtSql.QSqlQuery(self.db)  # Use the main thread's db connection
         query.exec_("SELECT * FROM users")  # Execute the query to fetch all users
         self.model.setQuery(query)  # Pass the QSqlQuery object to setQuery
