@@ -27,8 +27,8 @@ class Window(QtWidgets.QWidget):
 
         # MODEL
         model = QtSql.QSqlTableModel()
-        model.setTable("users")
-        model.select()
+        model.setTable("users") # model.setQuery( QSqlQuery("SELECT * FROM users") )
+        model.select()  # Automatically executes "SELECT * FROM users"
 
         # WIDGETS
         widget = QtWidgets.QTableView()
