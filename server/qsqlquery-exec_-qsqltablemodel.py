@@ -19,7 +19,7 @@ query.exec_("INSERT INTO users (name, age) VALUES ('Bob', 25)")
 query.exec_("SELECT * FROM users")
 
 model = QtSql.QSqlTableModel()
-model.setTable("users")
+model.setTable("users") # model.setQuery( QSqlQuery("SELECT * FROM users") )
 model.select()  # Automatically executes "SELECT * FROM users"
 
 # Print the query result (data from the model)
