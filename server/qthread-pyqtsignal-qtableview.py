@@ -1,7 +1,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets, QtSql
 
 class Worker(QtCore.QThread):
-    data_fetched = QtCore.pyqtSignal(list)  # Signal to send fetched data
+    signal = QtCore.pyqtSignal(bool)  # Signal to send fetched data
 
     def __init__(self, db):
         super().__init__()
@@ -18,26 +18,11 @@ class Worker(QtCore.QThread):
             )
             """
         )
-        query.prepare("INSERT INTO users (name, age) VALUES (?, ?)")
-        
-        query.addBindValue("Alice")
-        query.addBindValue(25)
-        query.exec_()
+        query.exec_("DELETE FROM users")
+        query.exec_("INSERT INTO users (name, age) VALUES ('Alice', 30)")
+        query.exec_("INSERT INTO users (name, age) VALUES ('Bob', 25)")
 
-        query.addBindValue("Bob")
-        query.addBindValue(30)
-        query.exec_()
-
-        # Query: Fetch data
-        data = []
-        query.exec_("SELECT * FROM users")
-        while query.next():
-            user_id = query.value(0)
-            name = query.value(1)
-            age = query.value(2)
-            data.append((user_id, name, age))
-        
-        self.data_fetched.emit(data)  # Emit the signal with fetched data
+        self.signal.emit(True)  # Emit the signal for fetched data
 
 
 class Window(QtWidgets.QWidget):
@@ -64,11 +49,10 @@ class Window(QtWidgets.QWidget):
 
         # Database Worker
         self.worker = Worker(self.db)  # Pass the main thread DB to the worker
-        self.worker.data_fetched.connect(self.update_table)  # Connect signal to slot
+        self.worker.signal.connect(self.update_table)  # Connect signal to slot
         self.worker.start()  # Start the worker thread
 
     def update_table(self, data):
-        # Refresh model with new data
         query = QtSql.QSqlQuery(self.db)  # Use the main thread's db connection
         query.exec_("SELECT * FROM users")  # Execute the query to fetch all users
         self.model.setQuery(query)  # Pass the QSqlQuery object to setQuery
