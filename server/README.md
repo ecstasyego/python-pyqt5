@@ -14,6 +14,11 @@ from PyQt5.QtSql import QSqlDatabase, QSqlQuery
 db = QSqlDatabase.addDatabase( "QSQLITE" )
 db.setDatabaseName(":memory:") # example.db, example.sqlite3, ...
 
+if not db.open():
+    print("DB Connection: Fail")
+else:
+    print("DB COnnection: Sucess")
+
 query = QSqlQuery()
 query.exec_(
     """
