@@ -4,7 +4,7 @@ db = QtSql.QSqlDatabase.addDatabase( "QSQLITE" )
 db.setDatabaseName(":memory:") # example.db, example.sqlite3, ...
 db.open()
 
-query = QtSql.QSqlQuery()
+query = QtSql.QSqlQuery(db)
 query.exec_(
     """
     CREATE TABLE IF NOT EXISTS users (
