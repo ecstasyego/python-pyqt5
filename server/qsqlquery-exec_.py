@@ -16,8 +16,8 @@ query.exec_(
 )
 query.exec_("INSERT INTO users (name, age) VALUES ('Alice', 30)")
 query.exec_("INSERT INTO users (name, age) VALUES ('Bob', 25)")
-query.exec_("SELECT * FROM users")
 
+query.exec_("SELECT * FROM users")
 while query.next():
     user_id = query.value(0)  # First column (ID)
     name = query.value(1)     # Second column (name)
