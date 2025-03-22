@@ -76,6 +76,7 @@ db.close()
 ### ViewModel
 ```python
 from PyQt5.QtSql import QSqlDatabase, QSqlQuery, QSqlTableModel
+from PyQt5.QtWidgets import QTableView
 
 db = QSqlDatabase.addDatabase("QSQLITE")
 db.setDatabaseName(":memory:")  # In-memory database
@@ -84,6 +85,9 @@ db.open()
 model = QSqlTableModel() # Setting up the table model (automatically uses the active db connection)
 model.setTable("users")  # This will use the db connection created above
 model.select()  # Queries the "users" table from the active database
+
+widget = QTableView()
+widget.setModel(model)
 ```
 
 
