@@ -23,7 +23,7 @@ db = QSqlDatabase.addDatabase( "QSQLITE" )
 db.setDatabaseName(":memory:") # example.db, example.sqlite3, ...
 db.open()
 
-query = QSqlQuery()
+query = QSqlQuery(db)
 query.exec_(
     """
     CREATE TABLE IF NOT EXISTS users (
@@ -60,7 +60,7 @@ db.setUserName("testuser")
 db.setPassword("PASSWORD")
 db.open()
 
-query = QSqlQuery()
+query = QSqlQuery(db)
 query.exec_(
     """
     CREATE TABLE IF NOT EXISTS users (
@@ -85,9 +85,9 @@ db = QSqlDatabase.addDatabase("QSQLITE") # [DB DRIVER]
 db.setDatabaseName(":memory:")           # In-memory database
 db.open()
 
-model = QSqlTableModel() # Setting up the table model (automatically uses the active db connection)
-model.setTable("users")  # [DB TABLE] This will use the db connection created above
-model.select()           # [DB QUERY]
+model = QSqlTableModel()   # Setting up the table model (automatically uses the active db connection)
+model.setTable("users")    # [DB TABLE] This will use the db connection created above
+model.select()             # [DB QUERY]
 
 widget = QTableView()
 widget.setModel(model)
