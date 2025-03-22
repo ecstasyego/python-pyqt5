@@ -55,6 +55,8 @@ class Window(QtWidgets.QWidget):
         self.setLayout(layout)
         self.setGeometry(300, 300, 300, 200)
 
+        db.close()
+    
     def callback(self):
         pass
 
