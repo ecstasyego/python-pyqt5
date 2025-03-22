@@ -36,8 +36,8 @@ db.close()
 ### Remote: MySQL
 `TCP/IP Socket Account`
 ```mysql
-CREATE USER 'root'@'127.0.0.1' IDENTIFIED BY 'PASSWORD';
-GRANT ALL PRIVILEGES ON *.* TO 'root'@'127.0.0.1' WITH GRANT OPTION;
+CREATE USER 'testuser'@'127.0.0.1' IDENTIFIED BY 'PASSWORD';
+GRANT ALL PRIVILEGES ON *.* TO 'testuser'@'127.0.0.1' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 ```
 
@@ -52,7 +52,7 @@ db = QSqlDatabase.addDatabase( "QMYSQL" )
 db.setHostName("127.0.0.1")
 db.setPort(3306)
 db.setDatabaseName("example")
-db.setUserName("root")
+db.setUserName("testuser")
 db.setPassword("PASSWORD")
 
 if not db.open():
