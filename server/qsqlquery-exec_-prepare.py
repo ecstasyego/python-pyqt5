@@ -15,6 +15,8 @@ query.exec_(
     """
 )
 query.exec_("DELETE FROM users")
+
+# INSERT
 query.prepare("INSERT INTO users (name, age) VALUES (?, ?)")
 
 query.addBindValue("Alice")
@@ -25,6 +27,7 @@ query.addBindValue("Bob")
 query.addBindValue(30)
 query.exec_()
 
+# SELECT
 query.exec_("SELECT * FROM users")
 while query.next():
     user_id = query.value(0)  # First column (ID)
