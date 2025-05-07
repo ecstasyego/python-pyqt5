@@ -12,6 +12,10 @@ class Window(QtWidgets.QWidget):
         self.setLayout(layout)
         self.setGeometry(300, 300, 300, 200)
 
+        widget = self.layout().itemAt(0).widget(); print(widget.__class__.__name__)
+        layout = self.layout().itemAt(1).layout(); print(layout.__class__.__name__)
+
+
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
