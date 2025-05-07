@@ -7,10 +7,11 @@ class Window(QtWidgets.QWidget):
         widget = QtWidgets.QSplitter(QtCore.Qt.Vertical)
         widget.addWidget(QtWidgets.QWidget())
         widget.addWidget(QtWidgets.QLabel("EEE"))
-        widget.addWidget(QtWidgets.QSplitter(QtCore.Qt.Horizontal))
-        widget.widget(2).addWidget(QtWidgets.QLabel("LLL"))
-        widget.widget(2).addWidget(QtWidgets.QFrame())
-        widget.widget(2).addWidget(QtWidgets.QFrame())
+        widget.addWidget(QtWidgets.QWidget())
+        widget.widget(2).setLayout(QtWidgets.QVBoxLayout())
+        widget.widget(2).layout().addWidget(QtWidgets.QSplitter(QtCore.Qt.Horizontal))
+        widget.widget(2).layout().itemAt(0).widget().addWidget(QtWidgets.QLabel("EEE0"))
+        widget.widget(2).layout().itemAt(0).widget().addWidget(QtWidgets.QLabel("EEE1"))
 
         # LAYOUTS
         layout = QtWidgets.QVBoxLayout()
@@ -19,7 +20,7 @@ class Window(QtWidgets.QWidget):
         self.setGeometry(300, 300, 300, 200)
 
         # INITIALS
-        widget.setSizes([50, 150, 250])
+        widget.setSizes([100]*widget.count())
 
 if __name__ == "__main__":
     import sys
