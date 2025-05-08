@@ -11,7 +11,7 @@ class Window(QtWidgets.QWidget):
 
         layout.addWidget(widget)
         layout.removeWidget(widget)
-        widget.hide()
+        widget.hide() # .close() / .hide() 
         widget.deleteLater()
 
         self.setLayout(layout)
