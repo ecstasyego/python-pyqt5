@@ -20,8 +20,15 @@ class CentralWidget(QtWidgets.QWidget):
         layout.addWidget(Widget())
         self.setLayout(layout)
 
-        self.layout().itemAt(0).widget().signal.connect(lambda: print("ACTIVITY"))
+        self.layout().itemAt(0).widget().signal.connect(self.callback)
 
+    def callback(self):
+        layout = self.layout()
+        widget = layout.itemAt(0).widget()
+
+        layout.removeWidget(widget)
+        widget.deleteLater()
+        layout.addWidget(QtWidgets.QLabel("New Widget"))
 
 class Window(QtWidgets.QMainWindow):
     def __init__(self):
