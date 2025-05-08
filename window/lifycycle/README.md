@@ -28,7 +28,7 @@ class CentralWidget(QtWidgets.QWidget):
 
         layout.removeWidget(widget)
         widget.deleteLater()
-        layout.addWidget(QtWidgets.QLabel("New Widget"))
+        layout.addWidget(QtWidgets.QLabel("New Widget on Activity"))
 
 class Window(QtWidgets.QMainWindow):
     def __init__(self):
