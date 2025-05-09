@@ -50,3 +50,81 @@ if __name__ == "__main__":
     window.show()
     sys.exit(app.exec_())
 ```
+
+### QStackedWidget
+
+```python
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class Widget0(QtWidgets.QWidget):
+    signal = QtCore.pyqtSignal()
+
+    def __init__(self):
+        super().__init__()
+        widget0 = QtWidgets.QLabel("PAGE0")
+        widget1 = QtWidgets.QPushButton("PAGE0")
+        widget1.clicked.connect(self.signal.emit)
+
+        layout = QtWidgets.QVBoxLayout()
+        layout.addWidget(widget0)
+        layout.addWidget(widget1)
+        self.setLayout(layout)
+
+
+class Widget1(QtWidgets.QWidget):
+    signal = QtCore.pyqtSignal()
+
+    def __init__(self):
+        super().__init__()
+        widget0 = QtWidgets.QLabel("PAGE1")
+        widget1 = QtWidgets.QPushButton("PAGE1")
+        widget1.clicked.connect(self.signal.emit)
+
+        layout = QtWidgets.QVBoxLayout()
+        layout.addWidget(widget0)
+        layout.addWidget(widget1)
+        self.setLayout(layout)
+
+
+class CentralWidget(QtWidgets.QWidget):
+    def __init__(self):
+        super().__init__()
+        widget0 = Widget0()
+        widget1 = Widget1()
+        widget0.signal.connect(self.callback0)
+        widget1.signal.connect(self.callback1)
+
+        self.widgets = QtWidgets.QStackedWidget()
+        self.widgets.addWidget(widget0)
+        self.widgets.addWidget(widget1)
+
+        layout = QtWidgets.QVBoxLayout()
+        layout.addWidget(self.widgets)
+        self.setLayout(layout)
+        self.setGeometry(300, 300, 300, 200)
+
+    def callback0(self):
+        self.widgets.setCurrentIndex(1)
+
+    def callback1(self):
+        self.widgets.setCurrentIndex(0)
+
+class Window(QtWidgets.QMainWindow):
+    def __init__(self):
+        super().__init__()
+        centralwidget = CentralWidget()
+        self.setCentralWidget(centralwidget)
+        self.setMenuBar(QtWidgets.QMenuBar(self))
+        self.setStatusBar(QtWidgets.QStatusBar(self))
+        self.setGeometry(300, 300, 300, 200)
+        QtCore.QMetaObject.connectSlotsByName(self)
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+
+    window = Window()
+    window.show()
+    sys.exit(app.exec_())
+```
