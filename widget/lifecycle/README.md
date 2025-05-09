@@ -45,7 +45,6 @@ if __name__ == "__main__":
 ```python
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-
 class Widget0(QtWidgets.QWidget):
     signal = QtCore.pyqtSignal()
 
